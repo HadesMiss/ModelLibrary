@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes  -fPIC CMakeFiles/echo_server.dir/echo_server.cpp.o -o ../bin/echo_server  -Wl,-rpath,/home/hcx/hcxself/hcxServer/build/lib:/usr/local/lib ../lib/libpine_shared.so ../lib/libpine_shareds.so /usr/lib/x86_64-linux-gnu/libmysqlcppconn.so /usr/local/lib/libjsoncpp.so.1.9.5 
