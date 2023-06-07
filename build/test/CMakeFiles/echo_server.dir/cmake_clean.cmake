@@ -2,7 +2,6 @@ file(REMOVE_RECURSE
   "../bin/echo_server"
   "../bin/echo_server.pdb"
   "CMakeFiles/echo_server.dir/echo_server.cpp.o"
-  "CMakeFiles/echo_server.dir/echo_server.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

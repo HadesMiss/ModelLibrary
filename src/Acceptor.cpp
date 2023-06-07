@@ -9,7 +9,7 @@
 Acceptor::Acceptor(EventLoop *loop){
     socket_ = std::make_unique<Socket>();
     assert(socket_->Create() == RC_SUCCESS);
-    assert(socket_->Bind("127.0.0.1", 1234) == RC_SUCCESS);
+    assert(socket_->Bind("0.0.0.0", 1234) == RC_SUCCESS);
     assert(socket_->Listen() == RC_SUCCESS);
     channel_ = std::make_unique<Channel>(socket_->fd(), loop);
     std::function<void()> cb = std::bind(&Acceptor::AcceptConnection, this);
