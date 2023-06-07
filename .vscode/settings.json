@@ -58,6 +58,7 @@
         "cinttypes": "cpp",
         "typeinfo": "cpp",
         "list": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "optional": "cpp"
     }
 }

@@ -12,7 +12,7 @@ TcpServer::TcpServer(){
     std::function<void(int)> cb = std::bind(&TcpServer::NewConnection, this, std::placeholders::_1);
     acceptor_->set_new_connection_callback(cb);
 
-    unsigned int size = std::thread::hardware_concurrency() - 4;
+    unsigned int size = std::thread::hardware_concurrency() / 4;
     thread_pool_ = std::make_unique<ThreadPool>(size);
     for(size_t i = 0; i < size; i++){
         std::unique_ptr<EventLoop> sub_reactor_ = std::make_unique<EventLoop>();

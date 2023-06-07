@@ -25,7 +25,6 @@ Poller::~Poller(){
 
 std::vector<Channel*> Poller::Poll(long timeout) const{
     std::vector<Channel*> active_channels;
-    printf("\n epoll wait");
     int nfds = 0;
     try{
         nfds = epoll_wait(fd_, events_, MAX_EVENTS, 500000);
@@ -33,8 +32,6 @@ std::vector<Channel*> Poller::Poll(long timeout) const{
     catch (...) {
         std::cout << "Error occurred during epoll_wait: " << std::endl;
     }
-
-    printf("\n epoll wait success");
     for(int i = 0; i < nfds; i++){
         Channel *ch = (Channel*)events_[i].data.ptr;
         int events = events_[i].events;
@@ -49,7 +46,6 @@ std::vector<Channel*> Poller::Poll(long timeout) const{
         }
         active_channels.push_back(ch);
     }
-    printf("\n 返回处理 ");
     std::cout<<active_channels.size()<<std::endl;
     return active_channels;
 }

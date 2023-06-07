@@ -20,7 +20,6 @@ void EventLoop::Loop(std::atomic<bool>& stop) const {
         try{
             while (!stop.load()) {
                 for (Channel *active_ch : poller_->Poll()) {
-                    printf("yigexindeshijian");
                     active_ch->HandleEvent();
                 }
             }

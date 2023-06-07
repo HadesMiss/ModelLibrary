@@ -21,6 +21,10 @@ public:
 
     void parseURLParameters(const std::string& url);
 private:
+
+    void replaceSpaces();
+
+
     std::string request;
     std::string method;
     std::string path;
@@ -31,4 +35,6 @@ private:
     std::map<std::string, std::string> parameters;
     std::map<std::string, std::string> headersMp;
     SqlServer *hcxServer;
+
+
 };

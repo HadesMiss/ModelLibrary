@@ -16,10 +16,8 @@ Channel::~Channel(){loop_->DeleteChannel(this);}
 
 void Channel::HandleEvent() const {
     if(ready_events_ & READ_EVENT){
-        printf("read_callback");
         try{
-            if(read_callback_) printf("\n good for channel \n");
-            else printf("\n bad read callback \n");
+            if(!read_callback_) printf("\n bad read callback \n");
             read_callback_();
         }
         catch (const std::exception& e) {

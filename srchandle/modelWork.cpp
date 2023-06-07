@@ -7,7 +7,9 @@
 
 std::string modelListWork(std::map<std::string, std::string>& parameters, SqlServer* hcxServer){
     int offset = getOffset(parameters["pageIndex"]);
+    std::cout<<offset<<std::endl;
     std::string sortType = sortTypeMp(parameters["sortType"]);
+    std::cout<<sortType<<std::endl;
     std::vector<std::string>  labelList = getLabel(parameters);
     if(labelList.size() > 0 && parameters.count("name") == 0){
         handelModellistLabelQuery(labelList, hcxServer, sortType, offset);
@@ -22,9 +24,11 @@ std::string modelListWork(std::map<std::string, std::string>& parameters, SqlSer
         handleModeListNameQuery(parameters, hcxServer, sortType, offset);
     }
     else{
-        std::string query = "select * from model order by " + sortType + " desc limit 30 offset ?";
+        std::string query = "select * from model order by " + sortType + " DESC limit 30 offset ?";
+        std::cout<<query<<std::endl;
         hcxServer->preSearch(query);
         hcxServer->setParameter(1, offset);
+        std::cout<<query<<std::endl;
     }
 
     return handleModelListQueryResult(hcxServer);
@@ -88,7 +92,7 @@ void handleModeListNameQuery(std::map<std::string, std::string>& parameters, Sql
     std::vector<std::string> names = extractPlusParameters(name);
     
     std::string query = "select * from model where ";
-    for(int i = 0; i < names.size(); i ++){
+    for(size_t i = 0; i < names.size(); i ++){
         query += "name like ?";
 
         if(i < names.size() - 1){
@@ -97,15 +101,12 @@ void handleModeListNameQuery(std::map<std::string, std::string>& parameters, Sql
     }
     query += " order by " + sortType + " desc limit 30 offset ?";
     hcxServer->preSearch(query);
-    for(int i = 0; i < names.size(); i++){
+    for(size_t i = 0; i < names.size(); i++){
         hcxServer->setParameter(i + 1, "%" + names[i] + "%");
     }
     hcxServer->setParameter(names.size() + 1, offset);
 }
 
-int getOffset(std::string pageIndex){
-    return 30 * (std::stoi(pageIndex) - 1);
-}
 
 std::vector<std::string> getLabel(std::map<std::string, std::string>& parameters){
     std::vector<std::string> labelList;
@@ -144,7 +145,7 @@ void handelModellistLabelQuery(std::vector<std::string> labelLists, SqlServer* h
 
     std::string query = "SELECT DISTINCT model.* FROM model";
 
-    for (int i = 0; i < labelLists.size(); i++) {
+    for (size_t i = 0; i < labelLists.size(); i++) {
         std::string labelList = labelLists[i];
         std::string labelAlias = "l" + std::to_string(i + 1);
         std::string label2ModelAlias = "lm" + std::to_string(i + 1);
@@ -167,7 +168,7 @@ std::string sortTypeMp(std::string sp){
 void handelModellistLabelNameQuery(std::vector<std::string> labelLists, SqlServer* hcxServer, std::string sortType, int offset, std::map<std::string, std::string>& parameters){
     std::string query = "SELECT DISTINCT model.* FROM model";
 
-    for (int i = 0; i < labelLists.size(); i++) {
+    for (size_t i = 0; i < labelLists.size(); i++) {
         std::string labelList = labelLists[i];
         std::string labelAlias = "l" + std::to_string(i + 1);
         std::string label2ModelAlias = "lm" + std::to_string(i + 1);
@@ -181,7 +182,7 @@ void handelModellistLabelNameQuery(std::vector<std::string> labelLists, SqlServe
     std::vector<std::string> names = extractPlusParameters(name);
     
     query += " where ";
-    for(int i = 0; i < names.size(); i ++){
+    for(size_t i = 0; i < names.size(); i ++){
         query += ("model.name like '%" + names[i] + "%'");
 
         if(i < names.size() - 1){
@@ -192,6 +193,9 @@ void handelModellistLabelNameQuery(std::vector<std::string> labelLists, SqlServe
     query += " order by model." + sortType + " desc limit 30 offset ?";
     std::cout<<query<<std::endl;
     hcxServer->preSearch(query);
-
     hcxServer->setParameter(1, offset);
+}
+
+int getOffset(std::string pageIndex){
+    return 30 * (std::stoi(pageIndex) - 1);
 }

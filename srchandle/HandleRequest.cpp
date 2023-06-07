@@ -28,6 +28,9 @@ void HandleRequest::translation(){
     std::istringstream lineStream(requestLine);
     lineStream >> method >> path >> httpVersion;
 
+    replaceSpaces();
+    std::cout<<path<<std::endl;
+
     // 解析报文头部
     std::string header;
     while(std::getline(iss, header) && header.size() > 1){
@@ -66,10 +69,8 @@ std::string HandleRequest::response(){
         "Content-Length: " + std::to_string(content.length()) + "\r\n"
         "Connection: " + connection + "\n"
         "\r\n" + content;
-    std::cout<<"connection"<<content.length()<<std::endl;
 
-    std::cout<<"connection"<<"Connection: " + connection + "\r\n"<<std::endl;
-        std::cout<<"connection"<<connection.length()<<std::endl;
+    std::cout<<"content"<<content.length()<<std::endl;
     return responseContent;
 }
 
@@ -207,6 +208,17 @@ void HandleRequest::parseURLParameters(const std::string& url){
         }
 
         pos = valueEnd + 1;
+    }
+}
+
+void HandleRequest::replaceSpaces(){
+    std::string replacement = " ";
+    std::string target = "%20";
+    size_t pos = 0;
+
+    while((pos = path.find(target, pos)) != std::string::npos){
+        path.replace(pos, target.length(), replacement);
+        pos += replacement.length();
     }
 }
 

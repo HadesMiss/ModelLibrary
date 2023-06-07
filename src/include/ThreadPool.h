@@ -13,7 +13,7 @@
 class ThreadPool{
 public:
     DISALLOW_COPY_AND_MOVE(ThreadPool);
-    explicit ThreadPool(unsigned int size = std::thread::hardware_concurrency() - 4);
+    explicit ThreadPool(unsigned int size = std::thread::hardware_concurrency() / 4);
     ~ThreadPool();
 
     template<class F, class... Args>
