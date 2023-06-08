@@ -2,21 +2,25 @@
 #include <fstream>
 #include <iostream>
 #include <json/json.h>
-#include "userWork.h"
 #include "modelWork.h"
 #include "datasetWork.h"
 
 HandleRequest::HandleRequest() : prePath("./frontend/build"){
     hcxServer = new SqlServer();
+    userWork = new UserWork(hcxServer);
     printf("\n sql server success");
 }
 
 HandleRequest:: HandleRequest(std::string _request, std::string _prePath) : request(_request), prePath(_prePath){
     hcxServer = new SqlServer();
+    userWork = new UserWork(hcxServer);
     translation();
 }
 
-HandleRequest::~HandleRequest(){delete hcxServer;}
+HandleRequest::~HandleRequest(){
+    delete hcxServer;
+    delete userWork;
+}
 
 void HandleRequest::translation(){
     std::istringstream iss(request);
@@ -29,12 +33,12 @@ void HandleRequest::translation(){
     lineStream >> method >> path >> httpVersion;
 
     replaceSpaces();
-    std::cout<<path<<std::endl;
 
     // 解析报文头部
     std::string header;
     while(std::getline(iss, header) && header.size() > 1){
-        headersMp[header.substr(0, header.find(':'))] = header.substr(header.find(':') + 2);
+        std::string temp = header.substr(header.find(':') + 2, header.find('\r'));
+        headersMp[header.substr(0, header.find(':'))] = temp;
     }
 
     // 解析报文正文
@@ -63,14 +67,20 @@ std::string HandleRequest::response(){
     else{
         content = "NO GET OR POST";
     }
+    std::cout<<"content"<<std::endl;
     std::string responseContent =
         "HTTP/1.1 200 OK\r\n"
         "Content-Type: "+ contentType + "\r\n"
         "Content-Length: " + std::to_string(content.length()) + "\r\n"
-        "Connection: " + connection + "\n"
-        "\r\n" + content;
+        "Connection: " + connection + "\r\n";
 
-    std::cout<<"content"<<content.length()<<std::endl;
+    if (needJWT) {
+        responseContent += "Authorization: " + userWork->getJwtToken() + "\r\n";
+        needJWT = false;
+    }
+
+    responseContent += "\r\n" + content;
+
     return responseContent;
 }
 
@@ -112,6 +122,11 @@ void HandleRequest::getResponse(std::string& _content, std::string& _contentType
         _contentType = "application/javascript";
         _content = readFile(prePath + path);
     }
+    else if(path == "/api/personalInformation"){
+        needJWT = true;
+        _contentType = "application/javascript";
+        _content = userWork->personalInformation(headersMp["Authorization"]);
+    }
     else{
         if(path.find(".js") != std::string::npos){
             _contentType = "application/javascript";
@@ -143,11 +158,12 @@ void HandleRequest::getResponse(std::string& _content, std::string& _contentType
 void HandleRequest::postResponse(std::string& _content, std::string& _contentType){
 
     if(path == "/api/login"){
-        _content = loginWork(body, hcxServer);
+        needJWT = true;
+        _content = userWork->loginWork(body);
         _contentType = "application/javascript";
     }
     else if(path == "/api/verifyUsername"){
-        _content = verifyWork(body, hcxServer);
+        _content = userWork->verifyWork(body);
         _contentType = "text/plain";
     }
 

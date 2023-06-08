@@ -179,6 +179,33 @@ Sqlserver.cpp.s:
 	cd /root/hcx/hcxServer/build && $(MAKE) -f srchandle/CMakeFiles/pine_shareds.dir/build.make srchandle/CMakeFiles/pine_shareds.dir/Sqlserver.cpp.s
 .PHONY : Sqlserver.cpp.s
 
+UserWork.o: UserWork.cpp.o
+
+.PHONY : UserWork.o
+
+# target to build an object file
+UserWork.cpp.o:
+	cd /root/hcx/hcxServer/build && $(MAKE) -f srchandle/CMakeFiles/pine_shareds.dir/build.make srchandle/CMakeFiles/pine_shareds.dir/UserWork.cpp.o
+.PHONY : UserWork.cpp.o
+
+UserWork.i: UserWork.cpp.i
+
+.PHONY : UserWork.i
+
+# target to preprocess a source file
+UserWork.cpp.i:
+	cd /root/hcx/hcxServer/build && $(MAKE) -f srchandle/CMakeFiles/pine_shareds.dir/build.make srchandle/CMakeFiles/pine_shareds.dir/UserWork.cpp.i
+.PHONY : UserWork.cpp.i
+
+UserWork.s: UserWork.cpp.s
+
+.PHONY : UserWork.s
+
+# target to generate assembly for a file
+UserWork.cpp.s:
+	cd /root/hcx/hcxServer/build && $(MAKE) -f srchandle/CMakeFiles/pine_shareds.dir/build.make srchandle/CMakeFiles/pine_shareds.dir/UserWork.cpp.s
+.PHONY : UserWork.cpp.s
+
 datasetWork.o: datasetWork.cpp.o
 
 .PHONY : datasetWork.o
@@ -233,33 +260,6 @@ modelWork.cpp.s:
 	cd /root/hcx/hcxServer/build && $(MAKE) -f srchandle/CMakeFiles/pine_shareds.dir/build.make srchandle/CMakeFiles/pine_shareds.dir/modelWork.cpp.s
 .PHONY : modelWork.cpp.s
 
-userWork.o: userWork.cpp.o
-
-.PHONY : userWork.o
-
-# target to build an object file
-userWork.cpp.o:
-	cd /root/hcx/hcxServer/build && $(MAKE) -f srchandle/CMakeFiles/pine_shareds.dir/build.make srchandle/CMakeFiles/pine_shareds.dir/userWork.cpp.o
-.PHONY : userWork.cpp.o
-
-userWork.i: userWork.cpp.i
-
-.PHONY : userWork.i
-
-# target to preprocess a source file
-userWork.cpp.i:
-	cd /root/hcx/hcxServer/build && $(MAKE) -f srchandle/CMakeFiles/pine_shareds.dir/build.make srchandle/CMakeFiles/pine_shareds.dir/userWork.cpp.i
-.PHONY : userWork.cpp.i
-
-userWork.s: userWork.cpp.s
-
-.PHONY : userWork.s
-
-# target to generate assembly for a file
-userWork.cpp.s:
-	cd /root/hcx/hcxServer/build && $(MAKE) -f srchandle/CMakeFiles/pine_shareds.dir/build.make srchandle/CMakeFiles/pine_shareds.dir/userWork.cpp.s
-.PHONY : userWork.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -275,15 +275,15 @@ help:
 	@echo "... Sqlserver.o"
 	@echo "... Sqlserver.i"
 	@echo "... Sqlserver.s"
+	@echo "... UserWork.o"
+	@echo "... UserWork.i"
+	@echo "... UserWork.s"
 	@echo "... datasetWork.o"
 	@echo "... datasetWork.i"
 	@echo "... datasetWork.s"
 	@echo "... modelWork.o"
 	@echo "... modelWork.i"
 	@echo "... modelWork.s"
-	@echo "... userWork.o"
-	@echo "... userWork.i"
-	@echo "... userWork.s"
 .PHONY : help
 
 

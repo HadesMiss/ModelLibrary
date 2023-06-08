@@ -6,5 +6,5 @@ CXX_FLAGS =  -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-
 
 CXX_DEFINES = -Dpine_shared_EXPORTS
 
-CXX_INCLUDES = -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp 
+CXX_INCLUDES = -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp 
 

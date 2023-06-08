@@ -12,6 +12,7 @@ test/CMakeFiles/echo_server.dir/echo_server.cpp.o: ../src/include/common.h
 test/CMakeFiles/echo_server.dir/echo_server.cpp.o: ../src/include/pine.h
 test/CMakeFiles/echo_server.dir/echo_server.cpp.o: ../srchandle/include/HandleRequest.h
 test/CMakeFiles/echo_server.dir/echo_server.cpp.o: ../srchandle/include/SqlServer.h
+test/CMakeFiles/echo_server.dir/echo_server.cpp.o: ../srchandle/include/UserWork.h
 test/CMakeFiles/echo_server.dir/echo_server.cpp.o: ../test/echo_server.cpp
 test/CMakeFiles/echo_server.dir/echo_server.cpp.o: /usr/include/jsoncpp/json/allocator.h
 test/CMakeFiles/echo_server.dir/echo_server.cpp.o: /usr/include/jsoncpp/json/autolink.h

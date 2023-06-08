@@ -83,9 +83,22 @@ srchandle/CMakeFiles/pine_shareds.dir/Sqlserver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pine_shareds.dir/Sqlserver.cpp.s"
 	cd /root/hcx/hcxServer/build/srchandle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/hcx/hcxServer/srchandle/Sqlserver.cpp -o CMakeFiles/pine_shareds.dir/Sqlserver.cpp.s
 
+srchandle/CMakeFiles/pine_shareds.dir/UserWork.cpp.o: srchandle/CMakeFiles/pine_shareds.dir/flags.make
+srchandle/CMakeFiles/pine_shareds.dir/UserWork.cpp.o: ../srchandle/UserWork.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/hcx/hcxServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object srchandle/CMakeFiles/pine_shareds.dir/UserWork.cpp.o"
+	cd /root/hcx/hcxServer/build/srchandle && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pine_shareds.dir/UserWork.cpp.o -c /root/hcx/hcxServer/srchandle/UserWork.cpp
+
+srchandle/CMakeFiles/pine_shareds.dir/UserWork.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pine_shareds.dir/UserWork.cpp.i"
+	cd /root/hcx/hcxServer/build/srchandle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/hcx/hcxServer/srchandle/UserWork.cpp > CMakeFiles/pine_shareds.dir/UserWork.cpp.i
+
+srchandle/CMakeFiles/pine_shareds.dir/UserWork.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pine_shareds.dir/UserWork.cpp.s"
+	cd /root/hcx/hcxServer/build/srchandle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/hcx/hcxServer/srchandle/UserWork.cpp -o CMakeFiles/pine_shareds.dir/UserWork.cpp.s
+
 srchandle/CMakeFiles/pine_shareds.dir/datasetWork.cpp.o: srchandle/CMakeFiles/pine_shareds.dir/flags.make
 srchandle/CMakeFiles/pine_shareds.dir/datasetWork.cpp.o: ../srchandle/datasetWork.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/hcx/hcxServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object srchandle/CMakeFiles/pine_shareds.dir/datasetWork.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/hcx/hcxServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object srchandle/CMakeFiles/pine_shareds.dir/datasetWork.cpp.o"
 	cd /root/hcx/hcxServer/build/srchandle && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pine_shareds.dir/datasetWork.cpp.o -c /root/hcx/hcxServer/srchandle/datasetWork.cpp
 
 srchandle/CMakeFiles/pine_shareds.dir/datasetWork.cpp.i: cmake_force
@@ -98,7 +111,7 @@ srchandle/CMakeFiles/pine_shareds.dir/datasetWork.cpp.s: cmake_force
 
 srchandle/CMakeFiles/pine_shareds.dir/modelWork.cpp.o: srchandle/CMakeFiles/pine_shareds.dir/flags.make
 srchandle/CMakeFiles/pine_shareds.dir/modelWork.cpp.o: ../srchandle/modelWork.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/hcx/hcxServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object srchandle/CMakeFiles/pine_shareds.dir/modelWork.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/hcx/hcxServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object srchandle/CMakeFiles/pine_shareds.dir/modelWork.cpp.o"
 	cd /root/hcx/hcxServer/build/srchandle && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pine_shareds.dir/modelWork.cpp.o -c /root/hcx/hcxServer/srchandle/modelWork.cpp
 
 srchandle/CMakeFiles/pine_shareds.dir/modelWork.cpp.i: cmake_force
@@ -109,35 +122,22 @@ srchandle/CMakeFiles/pine_shareds.dir/modelWork.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pine_shareds.dir/modelWork.cpp.s"
 	cd /root/hcx/hcxServer/build/srchandle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/hcx/hcxServer/srchandle/modelWork.cpp -o CMakeFiles/pine_shareds.dir/modelWork.cpp.s
 
-srchandle/CMakeFiles/pine_shareds.dir/userWork.cpp.o: srchandle/CMakeFiles/pine_shareds.dir/flags.make
-srchandle/CMakeFiles/pine_shareds.dir/userWork.cpp.o: ../srchandle/userWork.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/hcx/hcxServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object srchandle/CMakeFiles/pine_shareds.dir/userWork.cpp.o"
-	cd /root/hcx/hcxServer/build/srchandle && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pine_shareds.dir/userWork.cpp.o -c /root/hcx/hcxServer/srchandle/userWork.cpp
-
-srchandle/CMakeFiles/pine_shareds.dir/userWork.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pine_shareds.dir/userWork.cpp.i"
-	cd /root/hcx/hcxServer/build/srchandle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/hcx/hcxServer/srchandle/userWork.cpp > CMakeFiles/pine_shareds.dir/userWork.cpp.i
-
-srchandle/CMakeFiles/pine_shareds.dir/userWork.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pine_shareds.dir/userWork.cpp.s"
-	cd /root/hcx/hcxServer/build/srchandle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/hcx/hcxServer/srchandle/userWork.cpp -o CMakeFiles/pine_shareds.dir/userWork.cpp.s
-
 # Object files for target pine_shareds
 pine_shareds_OBJECTS = \
 "CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o" \
 "CMakeFiles/pine_shareds.dir/Sqlserver.cpp.o" \
+"CMakeFiles/pine_shareds.dir/UserWork.cpp.o" \
 "CMakeFiles/pine_shareds.dir/datasetWork.cpp.o" \
-"CMakeFiles/pine_shareds.dir/modelWork.cpp.o" \
-"CMakeFiles/pine_shareds.dir/userWork.cpp.o"
+"CMakeFiles/pine_shareds.dir/modelWork.cpp.o"
 
 # External object files for target pine_shareds
 pine_shareds_EXTERNAL_OBJECTS =
 
 lib/libpine_shareds.so: srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o
 lib/libpine_shareds.so: srchandle/CMakeFiles/pine_shareds.dir/Sqlserver.cpp.o
+lib/libpine_shareds.so: srchandle/CMakeFiles/pine_shareds.dir/UserWork.cpp.o
 lib/libpine_shareds.so: srchandle/CMakeFiles/pine_shareds.dir/datasetWork.cpp.o
 lib/libpine_shareds.so: srchandle/CMakeFiles/pine_shareds.dir/modelWork.cpp.o
-lib/libpine_shareds.so: srchandle/CMakeFiles/pine_shareds.dir/userWork.cpp.o
 lib/libpine_shareds.so: srchandle/CMakeFiles/pine_shareds.dir/build.make
 lib/libpine_shareds.so: srchandle/CMakeFiles/pine_shareds.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/hcx/hcxServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library ../lib/libpine_shareds.so"

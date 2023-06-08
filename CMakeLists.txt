@@ -50,8 +50,9 @@ set(PINE_TEST_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/test/include)
 set(PINE_SRCHANDLE_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/srchandle/include)
 include_directories(${PINE_SRC_INCLUDE_DIR} ${PINE_TEST_INCLUDE_DIR} ${PINE_SRCHANDLE_INCLUDE_DIR})
 include_directories(/usr/include/jsoncpp)
+include_directories(/usr/include/jwt-cpp)
+
 
 add_subdirectory(src)
 add_subdirectory(srchandle)
 add_subdirectory(test)
-

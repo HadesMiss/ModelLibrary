@@ -28,6 +28,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../test/include"
   "../srchandle/include"
   "/usr/include/jsoncpp"
+  "/usr/include/jwt-cpp"
   )
 
 # Targets to which this target links.

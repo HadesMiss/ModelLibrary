@@ -13,6 +13,7 @@ test/CMakeFiles/echo_server.dir/echo_server.cpp.o
  ../src/include/pine.h
  ../srchandle/include/HandleRequest.h
  ../srchandle/include/SqlServer.h
+ ../srchandle/include/UserWork.h
  /root/hcx/hcxServer/test/echo_server.cpp
  /usr/include/jsoncpp/json/allocator.h
  /usr/include/jsoncpp/json/autolink.h

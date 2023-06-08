@@ -4,6 +4,7 @@
 #include <vector>
 #include <map>
 #include "SqlServer.h"
+#include "UserWork.h"
 
 class HandleRequest{
 public:
@@ -35,6 +36,13 @@ private:
     std::map<std::string, std::string> parameters;
     std::map<std::string, std::string> headersMp;
     SqlServer *hcxServer;
+    UserWork* userWork;
+    bool needJWT = false;
+
+
+    std::string content;
+    std::string contentType;
+    std::string connection;
 
 
 };

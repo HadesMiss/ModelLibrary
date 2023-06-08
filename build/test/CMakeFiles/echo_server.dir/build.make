@@ -81,8 +81,12 @@ bin/echo_server: test/CMakeFiles/echo_server.dir/echo_server.cpp.o
 bin/echo_server: test/CMakeFiles/echo_server.dir/build.make
 bin/echo_server: lib/libpine_shared.so
 bin/echo_server: lib/libpine_shareds.so
+bin/echo_server: /usr/lib/x86_64-linux-gnu/libssl.so
+bin/echo_server: /usr/lib/x86_64-linux-gnu/libcrypto.so
 bin/echo_server: /usr/lib/x86_64-linux-gnu/libmysqlcppconn.so
 bin/echo_server: /usr/lib/x86_64-linux-gnu/libjsoncpp.so.1.7.4
+bin/echo_server: /usr/lib/x86_64-linux-gnu/libssl.so
+bin/echo_server: /usr/lib/x86_64-linux-gnu/libcrypto.so
 bin/echo_server: test/CMakeFiles/echo_server.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/hcx/hcxServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../bin/echo_server"
 	cd /root/hcx/hcxServer/build/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/echo_server.dir/link.txt --verbose=$(VERBOSE)

@@ -6,11 +6,39 @@
 
 #IncludeRegexTransform: 
 
+../src/include/Acceptor.h
+common.h
+../src/include/common.h
+memory
+-
+functional
+-
+
+../src/include/Buffer.h
+memory
+-
+string
+-
+common.h
+../src/include/common.h
+
 ../src/include/Channel.h
 functional
 -
 common.h
 ../src/include/common.h
+
+../src/include/Connection.h
+functional
+-
+common.h
+../src/include/common.h
+string
+-
+memory
+-
+HandleRequest.h
+../src/include/HandleRequest.h
 
 ../src/include/EventLoop.h
 common.h
@@ -33,6 +61,18 @@ string
 -
 common.h
 ../src/include/common.h
+
+../src/include/TcpServer.h
+common.h
+../src/include/common.h
+functional
+-
+unordered_map
+-
+vector
+-
+memory
+-
 
 ../src/include/ThreadPool.h
 condition_variable
@@ -58,8 +98,6 @@ common.h
 
 ../src/include/common.h
 
-../src/include/util.h
-
 ../srchandle/include/HandleRequest.h
 string
 -
@@ -71,6 +109,8 @@ map
 -
 SqlServer.h
 ../srchandle/include/SqlServer.h
+UserWork.h
+../srchandle/include/UserWork.h
 
 ../srchandle/include/SqlServer.h
 iostream
@@ -88,6 +128,14 @@ cppconn/prepared_statement.h
 json/json.h
 -
 
+../srchandle/include/UserWork.h
+iostream
+-
+SqlServer.h
+../srchandle/include/SqlServer.h
+unordered_map
+-
+
 /root/hcx/hcxServer/src/Channel.cpp
 Channel.h
 /root/hcx/hcxServer/src/Channel.h
@@ -99,6 +147,22 @@ EventLoop.h
 /root/hcx/hcxServer/src/EventLoop.h
 Socket.h
 /root/hcx/hcxServer/src/Socket.h
+
+/root/hcx/hcxServer/src/Connection.cpp
+Connection.h
+/root/hcx/hcxServer/src/Connection.h
+unistd.h
+-
+Buffer.h
+/root/hcx/hcxServer/src/Buffer.h
+Channel.h
+/root/hcx/hcxServer/src/Channel.h
+Socket.h
+/root/hcx/hcxServer/src/Socket.h
+cassert
+-
+cstring
+-
 
 /root/hcx/hcxServer/src/EventLoop.cpp
 EventLoop.h
@@ -118,20 +182,20 @@ iostream
 HandleRequest.h
 /root/hcx/hcxServer/src/HandleRequest.h
 
-/root/hcx/hcxServer/src/Poller.cpp
-Poller.h
-/root/hcx/hcxServer/src/Poller.h
-unistd.h
-/root/hcx/hcxServer/src/unistd.h
-cstring
+/root/hcx/hcxServer/src/TcpServer.cpp
+TcpServer.h
+/root/hcx/hcxServer/src/TcpServer.h
+EventLoop.h
+/root/hcx/hcxServer/src/EventLoop.h
+Acceptor.h
+/root/hcx/hcxServer/src/Acceptor.h
+ThreadPool.h
+/root/hcx/hcxServer/src/ThreadPool.h
+Connection.h
+/root/hcx/hcxServer/src/Connection.h
+cassert
 -
-Channel.h
-/root/hcx/hcxServer/src/Channel.h
-Socket.h
-/root/hcx/hcxServer/src/Socket.h
-util.h
-/root/hcx/hcxServer/src/util.h
-iostream
+unistd.h
 -
 
 /usr/include/jsoncpp/json/allocator.h

@@ -1,6 +1,8 @@
 #include <iostream>
 #include "pine.h"
 #include "HandleRequest.h"
+#include "jwt-cpp/jwt.h"
+#include "jwt-cpp/base.h"
 
 int main(){
     TcpServer *server = new TcpServer();

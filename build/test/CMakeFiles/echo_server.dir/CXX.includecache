@@ -111,6 +111,8 @@ map
 -
 SqlServer.h
 ../srchandle/include/SqlServer.h
+UserWork.h
+../srchandle/include/UserWork.h
 
 ../srchandle/include/SqlServer.h
 iostream
@@ -128,6 +130,14 @@ cppconn/prepared_statement.h
 json/json.h
 -
 
+../srchandle/include/UserWork.h
+iostream
+-
+SqlServer.h
+../srchandle/include/SqlServer.h
+unordered_map
+-
+
 /root/hcx/hcxServer/test/echo_server.cpp
 iostream
 -
@@ -135,6 +145,10 @@ pine.h
 /root/hcx/hcxServer/test/pine.h
 HandleRequest.h
 /root/hcx/hcxServer/test/HandleRequest.h
+jwt-cpp/jwt.h
+/root/hcx/hcxServer/test/jwt-cpp/jwt.h
+jwt-cpp/base.h
+/root/hcx/hcxServer/test/jwt-cpp/base.h
 
 /usr/include/jsoncpp/json/allocator.h
 cstring

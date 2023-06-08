@@ -13,6 +13,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../src/include"
   "../test/include"
   "../srchandle/include"
+  "/usr/include/jwt-cpp"
   "/usr/include/jsoncpp"
   )
 

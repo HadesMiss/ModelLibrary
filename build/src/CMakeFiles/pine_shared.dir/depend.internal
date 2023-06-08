@@ -18,6 +18,7 @@ src/CMakeFiles/pine_shared.dir/Channel.cpp.o
  ../src/include/common.h
  ../srchandle/include/HandleRequest.h
  ../srchandle/include/SqlServer.h
+ ../srchandle/include/UserWork.h
  /root/hcx/hcxServer/src/Channel.cpp
  /usr/include/jsoncpp/json/allocator.h
  /usr/include/jsoncpp/json/autolink.h
@@ -37,6 +38,7 @@ src/CMakeFiles/pine_shared.dir/Connection.cpp.o
  ../src/include/common.h
  ../srchandle/include/HandleRequest.h
  ../srchandle/include/SqlServer.h
+ ../srchandle/include/UserWork.h
  /root/hcx/hcxServer/src/Connection.cpp
  /usr/include/jsoncpp/json/allocator.h
  /usr/include/jsoncpp/json/autolink.h
@@ -56,6 +58,7 @@ src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o
  ../src/include/common.h
  ../srchandle/include/HandleRequest.h
  ../srchandle/include/SqlServer.h
+ ../srchandle/include/UserWork.h
  /root/hcx/hcxServer/src/EventLoop.cpp
  /usr/include/jsoncpp/json/allocator.h
  /usr/include/jsoncpp/json/autolink.h
@@ -87,6 +90,7 @@ src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o
  ../src/include/common.h
  ../srchandle/include/HandleRequest.h
  ../srchandle/include/SqlServer.h
+ ../srchandle/include/UserWork.h
  /root/hcx/hcxServer/src/TcpServer.cpp
  /usr/include/jsoncpp/json/allocator.h
  /usr/include/jsoncpp/json/autolink.h

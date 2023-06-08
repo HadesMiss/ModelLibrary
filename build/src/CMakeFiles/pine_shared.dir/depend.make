@@ -17,6 +17,7 @@ src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../src/include/Socket.h
 src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../src/include/common.h
 src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../srchandle/include/HandleRequest.h
 src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../srchandle/include/SqlServer.h
+src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../srchandle/include/UserWork.h
 src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../src/Channel.cpp
 src/CMakeFiles/pine_shared.dir/Channel.cpp.o: /usr/include/jsoncpp/json/allocator.h
 src/CMakeFiles/pine_shared.dir/Channel.cpp.o: /usr/include/jsoncpp/json/autolink.h
@@ -36,6 +37,7 @@ src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../src/include/Socket.h
 src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../src/include/common.h
 src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../srchandle/include/HandleRequest.h
 src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../srchandle/include/SqlServer.h
+src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../srchandle/include/UserWork.h
 src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../src/Connection.cpp
 src/CMakeFiles/pine_shared.dir/Connection.cpp.o: /usr/include/jsoncpp/json/allocator.h
 src/CMakeFiles/pine_shared.dir/Connection.cpp.o: /usr/include/jsoncpp/json/autolink.h
@@ -55,6 +57,7 @@ src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../src/include/ThreadPool.h
 src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../src/include/common.h
 src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../srchandle/include/HandleRequest.h
 src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../srchandle/include/SqlServer.h
+src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../srchandle/include/UserWork.h
 src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../src/EventLoop.cpp
 src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: /usr/include/jsoncpp/json/allocator.h
 src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: /usr/include/jsoncpp/json/autolink.h
@@ -86,6 +89,7 @@ src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o: ../src/include/ThreadPool.h
 src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o: ../src/include/common.h
 src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o: ../srchandle/include/HandleRequest.h
 src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o: ../srchandle/include/SqlServer.h
+src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o: ../srchandle/include/UserWork.h
 src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o: ../src/TcpServer.cpp
 src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o: /usr/include/jsoncpp/json/allocator.h
 src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o: /usr/include/jsoncpp/json/autolink.h

@@ -59,6 +59,8 @@
         "typeinfo": "cpp",
         "list": "cpp",
         "fstream": "cpp",
-        "optional": "cpp"
+        "optional": "cpp",
+        "codecvt": "cpp",
+        "set": "cpp"
     }
 }

@@ -6,9 +6,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/root/hcx/hcxServer/srchandle/HandleRequest.cpp" "/root/hcx/hcxServer/build/srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o"
   "/root/hcx/hcxServer/srchandle/Sqlserver.cpp" "/root/hcx/hcxServer/build/srchandle/CMakeFiles/pine_shareds.dir/Sqlserver.cpp.o"
+  "/root/hcx/hcxServer/srchandle/UserWork.cpp" "/root/hcx/hcxServer/build/srchandle/CMakeFiles/pine_shareds.dir/UserWork.cpp.o"
   "/root/hcx/hcxServer/srchandle/datasetWork.cpp" "/root/hcx/hcxServer/build/srchandle/CMakeFiles/pine_shareds.dir/datasetWork.cpp.o"
   "/root/hcx/hcxServer/srchandle/modelWork.cpp" "/root/hcx/hcxServer/build/srchandle/CMakeFiles/pine_shareds.dir/modelWork.cpp.o"
-  "/root/hcx/hcxServer/srchandle/userWork.cpp" "/root/hcx/hcxServer/build/srchandle/CMakeFiles/pine_shareds.dir/userWork.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -23,6 +23,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../test/include"
   "../srchandle/include"
   "/usr/include/jsoncpp"
+  "/usr/include/jwt-cpp"
   )
 
 # Targets to which this target links.
