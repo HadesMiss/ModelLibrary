@@ -6,6 +6,20 @@
 
 #IncludeRegexTransform: 
 
+../srchandle/include/HandleRequest.h
+string
+-
+sstream
+-
+vector
+-
+map
+-
+SqlServer.h
+../srchandle/include/SqlServer.h
+UserWork.h
+../srchandle/include/UserWork.h
+
 ../srchandle/include/SqlServer.h
 iostream
 -
@@ -30,6 +44,38 @@ SqlServer.h
 unordered_map
 -
 
+../srchandle/include/datasetWork.h
+string
+-
+map
+-
+SqlServer.h
+../srchandle/include/SqlServer.h
+
+../srchandle/include/modelWork.h
+string
+-
+map
+-
+SqlServer.h
+../srchandle/include/SqlServer.h
+vector
+-
+
+/root/hcx/hcxServer/srchandle/HandleRequest.cpp
+HandleRequest.h
+/root/hcx/hcxServer/srchandle/HandleRequest.h
+fstream
+-
+iostream
+-
+json/json.h
+-
+modelWork.h
+/root/hcx/hcxServer/srchandle/modelWork.h
+datasetWork.h
+/root/hcx/hcxServer/srchandle/datasetWork.h
+
 /root/hcx/hcxServer/srchandle/UserWork.cpp
 string
 -
@@ -40,6 +86,14 @@ UserWork.h
 jwt.h
 -
 base.h
+-
+ctime
+-
+fstream
+-
+iostream
+-
+filesystem
 -
 
 /usr/include/jsoncpp/json/allocator.h

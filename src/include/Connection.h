@@ -22,13 +22,13 @@ public:
     void set_on_recv(std::function<void(Connection *)> const &fn);
     State state() const;
     Socket *socket() const;
-    void set_send_buf(const std::string &str);
+    void set_send_buf(const std::vector<char> &str);
     Buffer *read_buf();
     Buffer *send_buf();
 
     RC Read();
     RC Write();
-    RC Send(std::string &msg);
+    RC Send(std::vector<char> &msg);
 
     void Close();
 
