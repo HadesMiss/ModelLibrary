@@ -43,11 +43,14 @@ Json::Value SqlServer::getResult(std::string query){
 
 
 Json::Value SqlServer::getResult(){
-
     result = pstmt->executeQuery();
     return convertResultToJsonString(result);
-    
 }
+
+void SqlServer::executeUpdate(){
+    pstmt->executeUpdate();
+}
+
 
 Json::Value SqlServer::convertResultToJsonString(sql::ResultSet *result){
     Json::Value jsonResult;

@@ -14,7 +14,11 @@ public:
     std::string personalInformation(std::string token_);
     std::string verifyWork(std::string body);
     std::string getJwtToken();
+    std::string submitUserInfo(std::vector<char> &body, std::string boundary);
     void makeToken();
+    void parseMultipartFormDate(std::vector<char> &formData, std::string boundary);
+    std::string generateUniqueFilename();
+    void saveImageToFile(const std::string& imageData, const std::string& filePath);
 
 private:
     std::string username;
@@ -26,6 +30,9 @@ private:
     SqlServer* sqlServer;
     Json::Value data;
     Json::Value ans;
+    Json::Value root;
+    Json::Reader reader;
+    Json::FastWriter writer;
     std::string msg;
     bool isReal = false;
     int code;

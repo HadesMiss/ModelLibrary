@@ -1,5 +1,23 @@
 #include "pine.h"
 #include <iostream>
+#include <fstream>
+
+std::string readFile(bool isBinary = true) {
+    std::string path = "../build/frontend/build/logo192.png";
+    if(isBinary == true){
+        std::ifstream file(path, std::ios::binary);
+        std::string content((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
+        file.close();
+        return content;
+    }
+    else{
+        std::ifstream file(path);
+        std::string content((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
+        file.close();
+        return content;
+    }
+
+}
 
 int main() {
   Socket *sock = new Socket();
@@ -9,9 +27,11 @@ int main() {
   Connection *conn = new Connection(sock->fd(), nullptr);
 
   while (true) {
-    std::string input;
-    std::getline(std::cin, input);
-    conn->set_send_buf(input.c_str());
+    std::string input = readFile();
+    std::cout<<"dgrdgrgdr"<<std::endl;
+    std::cout<<input<<std::endl;
+    std::cout<<"dasgdgdg"<<std::endl;
+    conn->set_send_buf(input);
     conn->Write();
     if (conn->state() == Connection::State::Closed) {
       printf("\n conn closed");
