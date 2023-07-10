@@ -19,12 +19,21 @@ int main(){
 
     server->onRecv([](Connection *conn) {
         if(conn->state() == Connection::State::Closed) {conn->Close();return;}
-        // conn->handlerequest->setrequest(conn->read_buf()->c_str());
-        std::cout << "Message from client \n" << conn->read_buf()->buf()<< std::endl;
-        conn->loop_->testhandle->setrequest(conn->read_buf()->c_str());
+        // conn->handlerequest->setrequest(conn->read_buf()->buf());
+        std::cout << "Message from client \n" << conn->read_buf()->bufStr()<< std::endl;
+        conn->loop_->testhandle->setrequest(conn->read_buf()->bufOrigin());
         std::string ans = conn->loop_->testhandle->response();
-        std::cout<<"get ans"<<std::endl;
-        conn->Send(ans);
+        while(!ans.length()) {
+            conn->Read();
+            std::cout << "Message from client \n" << conn->read_buf()->bufStr()<< std::endl;
+            conn->loop_->testhandle->setrequest(conn->read_buf()->bufOrigin());
+            ans = conn->loop_->testhandle->response();
+        }
+        
+
+        std::cout<<"get ans"<<ans.length()<<std::endl;
+        std::vector<char> charVector(ans.begin(), ans.end());
+        conn->Send(charVector);
     });
     server->Start();
 

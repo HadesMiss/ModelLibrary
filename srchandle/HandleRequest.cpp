@@ -11,7 +11,7 @@ HandleRequest::HandleRequest() : prePath("./frontend/build"){
     printf("\n sql server success");
 }
 
-HandleRequest:: HandleRequest(std::string _request, std::string _prePath) : request(_request), prePath(_prePath){
+HandleRequest:: HandleRequest(std::vector<char> _request, std::string _prePath) : requestRe(_request), prePath(_prePath){
     hcxServer = new SqlServer();
     userWork = new UserWork(hcxServer);
     translation();
@@ -23,6 +23,15 @@ HandleRequest::~HandleRequest(){
 }
 
 void HandleRequest::translation(){
+    if(multipartUserInfo) {
+        bodyRe.insert(bodyRe.end(), requestRe.begin(), requestRe.end());
+        std::cout<<"kongbody"<<std::string(bodyRe.data(), bodyRe.size())<<std::endl;
+        method = "";
+        return;
+    }
+
+    std::string request(requestRe.data(), requestRe.size());
+
     std::istringstream iss(request);
 
     // 解析请求行
@@ -41,10 +50,14 @@ void HandleRequest::translation(){
         headersMp[header.substr(0, header.find(':'))] = temp;
     }
 
-    // 解析报文正文
-    std::stringstream bodyStream;
-    bodyStream << iss.rdbuf();
-    body = bodyStream.str();
+    std::string bodyDelimiter = "\r\n\r\n";
+    auto bodyStartPos = std::search(requestRe.begin(), requestRe.end(), bodyDelimiter.begin(), bodyDelimiter.end());
+    if (bodyStartPos != requestRe.end()) {
+        bodyStartPos += bodyDelimiter.size();
+        bodyRe = std::vector<char>(bodyStartPos, requestRe.end());
+        body = std::string(bodyRe.data(), bodyRe.size());
+        // 处理主体部分，包括二进制数据
+    }
 }
 
 std::string HandleRequest::response(){
@@ -57,7 +70,7 @@ std::string HandleRequest::response(){
     else{
         connection = "close";
     }
-
+    std::cout<<"method"<<std::endl;
     if(method == "GET"){
         getResponse(content, contentType);
     }
@@ -65,7 +78,15 @@ std::string HandleRequest::response(){
         postResponse(content, contentType);
     }
     else{
-        content = "NO GET OR POST";
+        if(multipartUserInfo) {
+            std::cout<<"zhentshichuli"<<std::endl;
+            content = userWork->submitUserInfo(bodyRe, boundary);
+            contentType = "application/javascript";
+            multipartUserInfo = false;
+        }
+        else{
+            content = "NO GET OR POST";
+        }
     }
     std::cout<<"content"<<std::endl;
     std::string responseContent =
@@ -80,7 +101,7 @@ std::string HandleRequest::response(){
     }
 
     responseContent += "\r\n" + content;
-
+    if(multipartUserInfo) responseContent = "";
     return responseContent;
 }
 
@@ -127,6 +148,10 @@ void HandleRequest::getResponse(std::string& _content, std::string& _contentType
         _contentType = "application/javascript";
         _content = userWork->personalInformation(headersMp["Authorization"]);
     }
+    else if(path == "/api/register/verifyUsername"){
+        _contentType = "application/javascript";
+        _content = userWork->verifyWork(headersMp["Authorization"]);
+    }
     else{
         if(path.find(".js") != std::string::npos){
             _contentType = "application/javascript";
@@ -143,30 +168,37 @@ void HandleRequest::getResponse(std::string& _content, std::string& _contentType
         else if(path.find(".ico") != std::string::npos){
             _contentType = "image/x-icon";
         }
-        else if(path.find(".png") != std::string::npos){
-            _contentType = "image/png";
+        else if(path.find(".jpg") != std::string::npos){
+            _contentType = "image/jpg";
         }
         else{
-            _contentType = "text/plain";
+            path = "/index.html";
+            _contentType = "text/html";
         }
         _content = readFile(prePath + path);
     }
     
-
 }
 
 void HandleRequest::postResponse(std::string& _content, std::string& _contentType){
-
     if(path == "/api/login"){
         needJWT = true;
         _content = userWork->loginWork(body);
         _contentType = "application/javascript";
     }
-    else if(path == "/api/verifyUsername"){
+    else if(path == "/api/register/verifyUsername"){
         _content = userWork->verifyWork(body);
-        _contentType = "text/plain";
+        _contentType = "application/javascript";
     }
-
+    else if(path == "/api/register/submitUserInfo"){
+        boundary = headersMp["Content-Type"].substr(headersMp["Content-Type"].find("=") + 5);
+        boundary = boundary.substr(0, boundary.find("\r"));
+        std::cout<<boundary<<std::endl;
+        std::cout<<boundary.length()<<std::endl;
+        needJWT = true;
+        multipartUserInfo = true;
+        method = "";
+    }
 }
 
 std::string HandleRequest::readFile(std::string path, bool isBinary) {
@@ -190,8 +222,8 @@ void HandleRequest::setprePath(std::string _prePath){
     translation();
 }
 
-void HandleRequest::setrequest(std::string _request){
-    request = _request;
+void HandleRequest::setrequest(std::vector<char> _request){
+    requestRe = _request;
     translation();
 }
 

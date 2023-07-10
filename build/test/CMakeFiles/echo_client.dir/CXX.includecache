@@ -13,6 +13,8 @@ string
 -
 common.h
 ../src/include/common.h
+vector
+-
 
 ../src/include/Connection.h
 functional
@@ -111,6 +113,8 @@ map
 -
 SqlServer.h
 ../srchandle/include/SqlServer.h
+UserWork.h
+../srchandle/include/UserWork.h
 
 ../srchandle/include/SqlServer.h
 iostream
@@ -128,10 +132,20 @@ cppconn/prepared_statement.h
 json/json.h
 -
 
+../srchandle/include/UserWork.h
+iostream
+-
+SqlServer.h
+../srchandle/include/SqlServer.h
+unordered_map
+-
+
 /root/hcx/hcxServer/test/echo_client.cpp
 pine.h
 /root/hcx/hcxServer/test/pine.h
 iostream
+-
+fstream
 -
 
 /usr/include/jsoncpp/json/allocator.h
