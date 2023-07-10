@@ -4,6 +4,8 @@
 #include <json/json.h>
 #include "modelWork.h"
 #include "datasetWork.h"
+#include <Connection.h>
+#include <Buffer.h>
 
 HandleRequest::HandleRequest() : prePath("./frontend/build"){
     hcxServer = new SqlServer();
@@ -11,9 +13,10 @@ HandleRequest::HandleRequest() : prePath("./frontend/build"){
     printf("\n sql server success");
 }
 
-HandleRequest:: HandleRequest(std::vector<char> _request, std::string _prePath) : requestRe(_request), prePath(_prePath){
+HandleRequest:: HandleRequest(std::vector<char> _request, Connection* conn, std::string _prePath) : requestRe(_request), prePath(_prePath){
     hcxServer = new SqlServer();
     userWork = new UserWork(hcxServer);
+    con_ = conn;
     translation();
 }
 
@@ -23,12 +26,12 @@ HandleRequest::~HandleRequest(){
 }
 
 void HandleRequest::translation(){
-    if(multipartUserInfo) {
-        bodyRe.insert(bodyRe.end(), requestRe.begin(), requestRe.end());
-        std::cout<<"kongbody"<<std::string(bodyRe.data(), bodyRe.size())<<std::endl;
-        method = "";
-        return;
-    }
+    // if(multipartUserInfo) {
+    //     bodyRe.insert(bodyRe.end(), requestRe.begin(), requestRe.end());
+    //     std::cout<<"kongbody"<<std::string(bodyRe.data(), bodyRe.size())<<std::endl;
+    //     method = "";
+    //     return;
+    // }
 
     std::string request(requestRe.data(), requestRe.size());
 
@@ -50,6 +53,7 @@ void HandleRequest::translation(){
         headersMp[header.substr(0, header.find(':'))] = temp;
     }
 
+
     std::string bodyDelimiter = "\r\n\r\n";
     auto bodyStartPos = std::search(requestRe.begin(), requestRe.end(), bodyDelimiter.begin(), bodyDelimiter.end());
     if (bodyStartPos != requestRe.end()) {
@@ -58,6 +62,16 @@ void HandleRequest::translation(){
         body = std::string(bodyRe.data(), bodyRe.size());
         // 处理主体部分，包括二进制数据
     }
+    if(headersMp.count("Content-Length") == 1){
+    long long length = stoi(headersMp["Content-Length"]);
+    while(bodyRe.size() < length){
+        con_->Read();
+        std::vector<char> buf_ = con_->read_buf()->bufOrigin();
+        bodyRe.insert(bodyRe.end(), buf_.begin(), buf_.end());
+        std::cout << "Message1 from client \n" << bodyRe.size()<< std::endl;
+        //sleep(5);
+    }
+    body = std::string(bodyRe.data(), bodyRe.size()) ;}
 }
 
 std::string HandleRequest::response(){
@@ -89,19 +103,20 @@ std::string HandleRequest::response(){
         }
     }
     std::cout<<"content"<<std::endl;
-    std::string responseContent =
-        "HTTP/1.1 200 OK\r\n"
-        "Content-Type: "+ contentType + "\r\n"
-        "Content-Length: " + std::to_string(content.length()) + "\r\n"
-        "Connection: " + connection + "\r\n";
+    std::string responseContent = "HTTP/1.1 200 OK\r\n";
+        responseContent += "Content-Type: " + contentType + "\r\n";
+        responseContent += "Content-Length: " + std::to_string(content.size()) + "\r\n";
+        responseContent += "Connection: " + connection + "\r\n";
+        //responseContent += "Authorization: " + userWork->getJwtToken() + "\r\n\r\n";
+        responseContent += content;
 
-    if (needJWT) {
-        responseContent += "Authorization: " + userWork->getJwtToken() + "\r\n";
-        needJWT = false;
-    }
+    // if (needJWT) {
+    //     responseContent += ("Authorization: " + userWork->getJwtToken() + "\r\n");
+    //     needJWT = false;
+    // }
 
-    responseContent += "\r\n" + content;
-    if(multipartUserInfo) responseContent = "";
+    // responseContent += ("\r\n" + content + "\r\n");
+    // //if(multipartUserInfo) responseContent = "";
     return responseContent;
 }
 
@@ -138,6 +153,10 @@ void HandleRequest::getResponse(std::string& _content, std::string& _contentType
     else if(path.find(".ico") != std::string::npos){
         _contentType = "image/x-icon";
         _content = readFile(prePath + path, true);
+    }
+    else if(path.find("hcxhcx") != std::string::npos){
+        _contentType = "image/x-icon";
+        _content = readFile("onemodelt", true);
     }
     else if(path.find(".js") != std::string::npos){
         _contentType = "application/javascript";
@@ -196,8 +215,25 @@ void HandleRequest::postResponse(std::string& _content, std::string& _contentTyp
         std::cout<<boundary<<std::endl;
         std::cout<<boundary.length()<<std::endl;
         needJWT = true;
-        multipartUserInfo = true;
-        method = "";
+        //multipartUserInfo = true;
+        //method = "";
+        content = userWork->submitUserInfo(bodyRe, boundary);
+        contentType = "application/javascript";
+    }
+    else if(path == "/api/modelhcx"){
+        std::string filename = "onemodelt";
+            //std::cout<<filename<<std::endl;
+        std::ofstream file(filename, std::ios::out | std::ios::binary);
+
+        if(file.is_open()){
+            file << body;
+            file.close();
+        }
+        else{
+            std::cout<<"Failed to open file: "<<filename<<std::endl;
+
+        //continueRead = true;
+    }
     }
 }
 
@@ -218,11 +254,13 @@ std::string HandleRequest::readFile(std::string path, bool isBinary) {
 }
 
 void HandleRequest::setprePath(std::string _prePath){
+    
     prePath = _prePath;
     translation();
 }
 
-void HandleRequest::setrequest(std::vector<char> _request){
+void HandleRequest::setrequest(std::vector<char> _request, Connection* connn){
+    con_ = connn;
     requestRe = _request;
     translation();
 }

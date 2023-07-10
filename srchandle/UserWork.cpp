@@ -226,6 +226,9 @@ void UserWork::parseMultipartFormDate(std::vector<char> &formData, std::string b
         else if(nameStr == "password"){
             password = valueStr;
         }
+        else if(nameStr == "username"){
+            username = valueStr;
+        }
     }
 }
 

@@ -5,18 +5,19 @@
 #include <map>
 #include "SqlServer.h"
 #include "UserWork.h"
+#include <Connection.h>
 
 class HandleRequest{
 public:
     HandleRequest();
-    explicit HandleRequest(std::vector<char> _request, std::string _prePath = "./frontend/build");
+    explicit HandleRequest(std::vector<char> _request, Connection* conn, std::string _prePath = "./frontend/build");
     void translation();
     std::string response();
     void getResponse(std::string& _content, std::string& _contentType);
     void postResponse(std::string& _content, std::string& _contentType);
     std::string readFile(std::string _path, bool isBinary = false);
     void setprePath(std::string _prePath);
-    void setrequest(std::vector<char> _request);
+    void setrequest(std::vector<char> _request, Connection* conn);
     std::string getBody();
     ~HandleRequest();
 
@@ -25,7 +26,7 @@ private:
 
     void replaceSpaces();
 
-
+    Connection* con_;
     std::vector<char> requestRe;
     std::string method;
     std::string path;
