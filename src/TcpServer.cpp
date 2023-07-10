@@ -24,10 +24,10 @@ TcpServer::~TcpServer(){}
 void TcpServer::Start(){
     for (size_t i = 0; i < sub_reactors_.size(); i++) {
         size_t index = i;
-        std::function<void()> sub_loop = [this, index]() { // 捕获stop参数
-            sub_reactors_[index]->Loop(thread_pool_->stop_);
+        std::function<void(int)> sub_loop = [this](int c) { // 捕获stop参数
+            sub_reactors_[c]->Loop(thread_pool_->stop_);
         };
-        thread_pool_->Add(std::move(sub_loop));
+        thread_pool_->Add(std::move(sub_loop), index);
     }
     main_reactor_->Loop(thread_pool_->stop_);
 }
