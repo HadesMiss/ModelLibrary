@@ -56,26 +56,29 @@ RC Connection::Write(){
         }
     }
     else{
-        rc = WriteBlocking();
+        rc = WriteNonBlocking();
     }
     send_buf_->Clear();
     return rc;
 }
 
 RC Connection::ReadNonBlocking(){
+    //std::vector<char> received_data;
     printf("\n read");
     int sockfd = socket_->fd();
-    char buf[1024];
+    char buf[8192];
     while(true){
         memset(buf, 0, sizeof(buf));
         ssize_t bytes_read = read(sockfd, buf, sizeof(buf));
         if(bytes_read > 0){
+            //received_data.insert(received_data.end(), buf, buf + bytes_read);
             read_buf_->Append(buf, bytes_read);
         }
         else if(bytes_read == -1 && errno == EINTR){
             printf("continue reading\n");
         }
         else if(bytes_read == -1 && ((errno == EAGAIN) || (errno == EWOULDBLOCK))){
+            //read_buf_->castTostring(received_data);
             printf("\n 正常中断读取");
             break;
         }
@@ -148,7 +151,8 @@ RC Connection::ReadBlocking() {
 RC Connection::WriteBlocking() {
     // 没有处理send_buffer_数据大于TCP写缓冲区，的情况，可能会有bug
     int sockfd = socket_->fd();
-    ssize_t bytes_write = write(sockfd, send_buf_->buf().c_str(), send_buf_->Size());
+    const char* data = send_buf_->c_str();
+    ssize_t bytes_write = write(sockfd, data, send_buf_->Size());
     if (bytes_write == -1) {
         printf("Other error on blocking client fd %d\n", sockfd);
         state_ = State::Closed;
@@ -156,7 +160,7 @@ RC Connection::WriteBlocking() {
     return RC_SUCCESS;
 }
 
-RC Connection::Send(std::string &msg) {
+RC Connection::Send(std::vector<char> &msg) {
     set_send_buf(msg);
     Write();
     return RC_SUCCESS;
@@ -186,7 +190,7 @@ Connection::State Connection::state() const { return state_; }
 
 Socket *Connection::socket() const { return socket_.get(); }
 
-void Connection::set_send_buf(const std::string &str) { send_buf_->set_buf(str); }
+void Connection::set_send_buf(const std::vector<char> &str) { send_buf_->set_buf(str); }
 Buffer *Connection::read_buf() { return read_buf_.get(); }
 Buffer *Connection::send_buf() { return send_buf_.get(); }
 

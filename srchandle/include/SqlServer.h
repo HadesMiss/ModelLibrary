@@ -20,6 +20,7 @@ public:
     void preSearch(std::string question);
     void setParameter(int index, std::string para);
     void setParameter(int index, int para);
+    void executeUpdate();
 private:
     sql::Driver *driver;
     sql::Connection *connection;
