@@ -13,6 +13,7 @@ src/CMakeFiles/pine_shared.dir/Buffer.cpp.o
  /root/hcx/hcxServer/src/Buffer.cpp
 src/CMakeFiles/pine_shared.dir/Channel.cpp.o
  ../src/include/Channel.h
+ ../src/include/Connection.h
  ../src/include/EventLoop.h
  ../src/include/Socket.h
  ../src/include/common.h
@@ -52,6 +53,7 @@ src/CMakeFiles/pine_shared.dir/Connection.cpp.o
  /usr/include/jsoncpp/json/writer.h
 src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o
  ../src/include/Channel.h
+ ../src/include/Connection.h
  ../src/include/EventLoop.h
  ../src/include/Poller.h
  ../src/include/ThreadPool.h

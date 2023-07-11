@@ -66,7 +66,7 @@ RC Connection::ReadNonBlocking(){
     //std::vector<char> received_data;
     printf("\n read");
     int sockfd = socket_->fd();
-    char buf[8192];
+    char buf[1024];
     while(true){
         memset(buf, 0, sizeof(buf));
         ssize_t bytes_read = read(sockfd, buf, sizeof(buf));
@@ -83,12 +83,12 @@ RC Connection::ReadNonBlocking(){
             break;
         }
         else if(bytes_read == 0){
-            printf("\n read EOF, client fd %d disconnected\n", sockfd);
+            printf("\n read EOF, client fd %d disconnected\n", sockfd, strerror(errno));
             state_ = State::Closed;
             return RC_UNDEFINED;
         }
         else{
-            printf("Other error on client fd %d\n", sockfd);
+            printf("Other error on client fd %d\n", sockfd, strerror(errno));
             state_ = State::Closed;
             break;
         }
@@ -100,26 +100,35 @@ RC Connection::WriteNonBlocking(){
     int sockfd = socket_->fd();
     const char* data = send_buf_->c_str();
     int data_size = send_buf_->Size();
+    std::cout<<"data_size"<<std::endl;
+    std::cout<<data_size<<std::endl;
+    sleep(2);
     int data_left = data_size - offset_;  // 计算剩余数据的大小
     ssize_t bytes_written = 0;
 
     while (data_left > 0) {
         bytes_written = write(sockfd, data + offset_, data_left);
+        std::cout<<bytes_written<<std::endl;
         if (bytes_written == -1 && errno == EINTR) {
             printf("continue writing\n");
             continue;
         }
         if (bytes_written == -1 && errno == EAGAIN) {
             // 数据无法完全写入，返回 RC_WRITE_INCOMPLETE，表示需要继续写入
+            std::cout<<"continue"<<std::endl;
             return RC_UNDEFINED;
         }
         if (bytes_written == -1) {
-            printf("Other error on client fd %d\n", sockfd);
+            printf("Other error1 on client fd %d\n", sockfd, strerror(errno));
             state_ = State::Closed;
             return RC_SUCCESS; // 返回错误代码，根据需要进行处理
         }
         offset_ += bytes_written;  // 更新偏移量
         data_left -= bytes_written;
+        std::cout<<"offset"<<std::endl;
+        std::cout<<offset_<<std::endl;
+        std::cout<<"data_left"<<std::endl;
+        std::cout<<data_left<<std::endl;
     }
 
     if (offset_ == data_size) {

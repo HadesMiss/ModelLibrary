@@ -100,6 +100,8 @@ common.h
 
 ../src/include/common.h
 
+../src/include/util.h
+
 ../srchandle/include/HandleRequest.h
 string
 -
@@ -113,6 +115,8 @@ SqlServer.h
 ../srchandle/include/SqlServer.h
 UserWork.h
 ../srchandle/include/UserWork.h
+Connection.h
+-
 
 ../srchandle/include/SqlServer.h
 iostream
@@ -137,6 +141,26 @@ SqlServer.h
 ../srchandle/include/SqlServer.h
 unordered_map
 -
+
+/root/hcx/hcxServer/src/Acceptor.cpp
+Acceptor.h
+/root/hcx/hcxServer/src/Acceptor.h
+fcntl.h
+-
+utility
+-
+Channel.h
+/root/hcx/hcxServer/src/Channel.h
+Socket.h
+/root/hcx/hcxServer/src/Socket.h
+cassert
+-
+
+/root/hcx/hcxServer/src/Buffer.cpp
+Buffer.h
+/root/hcx/hcxServer/src/Buffer.h
+iostream
+/root/hcx/hcxServer/src/iostream
 
 /root/hcx/hcxServer/src/Channel.cpp
 Channel.h
@@ -184,6 +208,40 @@ iostream
 HandleRequest.h
 /root/hcx/hcxServer/src/HandleRequest.h
 
+/root/hcx/hcxServer/src/Poller.cpp
+Poller.h
+/root/hcx/hcxServer/src/Poller.h
+unistd.h
+/root/hcx/hcxServer/src/unistd.h
+cstring
+-
+Channel.h
+/root/hcx/hcxServer/src/Channel.h
+Socket.h
+/root/hcx/hcxServer/src/Socket.h
+util.h
+/root/hcx/hcxServer/src/util.h
+iostream
+-
+
+/root/hcx/hcxServer/src/Socket.cpp
+Socket.h
+/root/hcx/hcxServer/src/Socket.h
+unistd.h
+/root/hcx/hcxServer/src/unistd.h
+fcntl.h
+/root/hcx/hcxServer/src/fcntl.h
+arpa/inet.h
+-
+sys/ioctl.h
+-
+sys/socket.h
+-
+cstring
+-
+cassert
+-
+
 /root/hcx/hcxServer/src/TcpServer.cpp
 TcpServer.h
 /root/hcx/hcxServer/src/TcpServer.h
@@ -198,6 +256,20 @@ Connection.h
 cassert
 -
 unistd.h
+-
+
+/root/hcx/hcxServer/src/ThreadPool.cpp
+ThreadPool.h
+/root/hcx/hcxServer/src/ThreadPool.h
+iostream
+-
+
+/root/hcx/hcxServer/src/util.cpp
+util.h
+/root/hcx/hcxServer/src/util.h
+cstdio
+-
+cstdlib
 -
 
 /usr/include/jsoncpp/json/allocator.h

@@ -187,8 +187,8 @@ srchandle/CMakeFiles/pine_shareds.dir/clean:
 # Target rules for target test/CMakeFiles/echo_server.dir
 
 # All Build rule for target.
-test/CMakeFiles/echo_server.dir/all: src/CMakeFiles/pine_shared.dir/all
 test/CMakeFiles/echo_server.dir/all: srchandle/CMakeFiles/pine_shareds.dir/all
+test/CMakeFiles/echo_server.dir/all: src/CMakeFiles/pine_shared.dir/all
 	$(MAKE) -f test/CMakeFiles/echo_server.dir/build.make test/CMakeFiles/echo_server.dir/depend
 	$(MAKE) -f test/CMakeFiles/echo_server.dir/build.make test/CMakeFiles/echo_server.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/hcx/hcxServer/build/CMakeFiles --progress-num=5,6 "Built target echo_server"
@@ -215,8 +215,8 @@ test/CMakeFiles/echo_server.dir/clean:
 # Target rules for target test/CMakeFiles/echo_clients.dir
 
 # All Build rule for target.
-test/CMakeFiles/echo_clients.dir/all: src/CMakeFiles/pine_shared.dir/all
 test/CMakeFiles/echo_clients.dir/all: srchandle/CMakeFiles/pine_shareds.dir/all
+test/CMakeFiles/echo_clients.dir/all: src/CMakeFiles/pine_shared.dir/all
 	$(MAKE) -f test/CMakeFiles/echo_clients.dir/build.make test/CMakeFiles/echo_clients.dir/depend
 	$(MAKE) -f test/CMakeFiles/echo_clients.dir/build.make test/CMakeFiles/echo_clients.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/hcx/hcxServer/build/CMakeFiles --progress-num=3,4 "Built target echo_clients"
@@ -243,8 +243,8 @@ test/CMakeFiles/echo_clients.dir/clean:
 # Target rules for target test/CMakeFiles/echo_client.dir
 
 # All Build rule for target.
-test/CMakeFiles/echo_client.dir/all: src/CMakeFiles/pine_shared.dir/all
 test/CMakeFiles/echo_client.dir/all: srchandle/CMakeFiles/pine_shareds.dir/all
+test/CMakeFiles/echo_client.dir/all: src/CMakeFiles/pine_shared.dir/all
 	$(MAKE) -f test/CMakeFiles/echo_client.dir/build.make test/CMakeFiles/echo_client.dir/depend
 	$(MAKE) -f test/CMakeFiles/echo_client.dir/build.make test/CMakeFiles/echo_client.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/hcx/hcxServer/build/CMakeFiles --progress-num=1,2 "Built target echo_client"

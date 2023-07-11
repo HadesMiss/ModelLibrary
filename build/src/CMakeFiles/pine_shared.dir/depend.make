@@ -12,6 +12,7 @@ src/CMakeFiles/pine_shared.dir/Buffer.cpp.o: ../src/include/common.h
 src/CMakeFiles/pine_shared.dir/Buffer.cpp.o: ../src/Buffer.cpp
 
 src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../src/include/Channel.h
+src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../src/include/Connection.h
 src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../src/include/EventLoop.h
 src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../src/include/Socket.h
 src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../src/include/common.h
@@ -51,6 +52,7 @@ src/CMakeFiles/pine_shared.dir/Connection.cpp.o: /usr/include/jsoncpp/json/versi
 src/CMakeFiles/pine_shared.dir/Connection.cpp.o: /usr/include/jsoncpp/json/writer.h
 
 src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../src/include/Channel.h
+src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../src/include/Connection.h
 src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../src/include/EventLoop.h
 src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../src/include/Poller.h
 src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../src/include/ThreadPool.h

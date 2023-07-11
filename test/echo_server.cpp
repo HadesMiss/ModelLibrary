@@ -19,17 +19,18 @@ int main(){
 
     server->onRecv([](Connection *conn) {
         if(conn->state() == Connection::State::Closed) {conn->Close();return;}
-        // conn->handlerequest->setrequest(conn->read_buf()->buf());
+        //conn->handlerequest->setrequest(conn->read_buf()->buf());
         std::cout << "Message from client \n" << conn->read_buf()->bufStr()<< std::endl;
-        conn->loop_->testhandle->setrequest(conn->read_buf()->bufOrigin());
+        std::cout << "Message from client \n" << conn->read_buf()->Size()<< std::endl;
+        conn->loop_->testhandle->setrequest(conn->read_buf()->bufOrigin(), conn);
         std::string ans = conn->loop_->testhandle->response();
-        while(!ans.length()) {
-            conn->Read();
-            std::cout << "Message from client \n" << conn->read_buf()->bufStr()<< std::endl;
-            conn->loop_->testhandle->setrequest(conn->read_buf()->bufOrigin());
-            ans = conn->loop_->testhandle->response();
-        }
-        
+        // while(!ans.length()) {
+        //     conn->Read();
+        //     std::cout << "Message from client \n" << conn->read_buf()->bufStr()<< std::endl;
+        //     std::cout << "Message from client \n" << conn->read_buf()->Size()<< std::endl;
+        //     conn->loop_->testhandle->setrequest(conn->read_buf()->bufOrigin());
+        //     ans = conn->loop_->testhandle->response();
+        // }
 
         std::cout<<"get ans"<<ans.length()<<std::endl;
         std::vector<char> charVector(ans.begin(), ans.end());

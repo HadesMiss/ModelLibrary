@@ -6,6 +6,30 @@
 
 #IncludeRegexTransform: 
 
+../src/include/Buffer.h
+memory
+-
+string
+-
+common.h
+../src/include/common.h
+vector
+-
+
+../src/include/Connection.h
+functional
+-
+common.h
+../src/include/common.h
+string
+-
+memory
+-
+HandleRequest.h
+../src/include/HandleRequest.h
+
+../src/include/common.h
+
 ../srchandle/include/HandleRequest.h
 string
 -
@@ -19,6 +43,8 @@ SqlServer.h
 ../srchandle/include/SqlServer.h
 UserWork.h
 ../srchandle/include/UserWork.h
+Connection.h
+-
 
 ../srchandle/include/SqlServer.h
 iostream
@@ -75,6 +101,16 @@ modelWork.h
 /root/hcx/hcxServer/srchandle/modelWork.h
 datasetWork.h
 /root/hcx/hcxServer/srchandle/datasetWork.h
+Connection.h
+-
+Buffer.h
+-
+
+/root/hcx/hcxServer/srchandle/Sqlserver.cpp
+SqlServer.h
+/root/hcx/hcxServer/srchandle/SqlServer.h
+iostream
+-
 
 /root/hcx/hcxServer/srchandle/UserWork.cpp
 string
@@ -94,6 +130,26 @@ fstream
 iostream
 -
 filesystem
+-
+
+/root/hcx/hcxServer/srchandle/datasetWork.cpp
+datasetWork.h
+/root/hcx/hcxServer/srchandle/datasetWork.h
+json/json.h
+-
+iostream
+-
+
+/root/hcx/hcxServer/srchandle/modelWork.cpp
+modelWork.h
+/root/hcx/hcxServer/srchandle/modelWork.h
+json/json.h
+-
+iostream
+-
+vector
+-
+unordered_map
 -
 
 /usr/include/jsoncpp/json/allocator.h
