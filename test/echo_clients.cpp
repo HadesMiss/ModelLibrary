@@ -1,5 +1,6 @@
 #include <unistd.h>
 #include <iostream>
+#include <vector>
 #include "pine.h"
 
 void OneClient(int msgs, int wait) {
@@ -12,7 +13,8 @@ void OneClient(int msgs, int wait) {
 
   int count = 0;
   while (count < msgs) {
-    conn->set_send_buf("I'm client!");
+    std::vector<char> tt = {'I', 'M', 'C', 'l'};
+    conn->set_send_buf(tt);
     conn->Write();
     if (conn->state() == Connection::State::Closed) {
       conn->Close();
