@@ -10,6 +10,8 @@ test/CMakeFiles/echo_server.dir/echo_server.cpp.o: ../src/include/TcpServer.h
 test/CMakeFiles/echo_server.dir/echo_server.cpp.o: ../src/include/ThreadPool.h
 test/CMakeFiles/echo_server.dir/echo_server.cpp.o: ../src/include/common.h
 test/CMakeFiles/echo_server.dir/echo_server.cpp.o: ../src/include/pine.h
+test/CMakeFiles/echo_server.dir/echo_server.cpp.o: ../srchandle/include/DatabaseConnectionPool.h
+test/CMakeFiles/echo_server.dir/echo_server.cpp.o: ../srchandle/include/FileRAII.h
 test/CMakeFiles/echo_server.dir/echo_server.cpp.o: ../srchandle/include/HandleRequest.h
 test/CMakeFiles/echo_server.dir/echo_server.cpp.o: ../srchandle/include/SqlServer.h
 test/CMakeFiles/echo_server.dir/echo_server.cpp.o: ../srchandle/include/UserWork.h

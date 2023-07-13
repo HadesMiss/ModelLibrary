@@ -1,92 +1,92 @@
 [
 {
   "directory": "/root/hcx/hcxServer/build/src",
-  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Acceptor.cpp.o -c /root/hcx/hcxServer/src/Acceptor.cpp",
+  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Acceptor.cpp.o -c /root/hcx/hcxServer/src/Acceptor.cpp",
   "file": "/root/hcx/hcxServer/src/Acceptor.cpp"
 },
 {
   "directory": "/root/hcx/hcxServer/build/src",
-  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Buffer.cpp.o -c /root/hcx/hcxServer/src/Buffer.cpp",
+  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Buffer.cpp.o -c /root/hcx/hcxServer/src/Buffer.cpp",
   "file": "/root/hcx/hcxServer/src/Buffer.cpp"
 },
 {
   "directory": "/root/hcx/hcxServer/build/src",
-  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Channel.cpp.o -c /root/hcx/hcxServer/src/Channel.cpp",
+  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Channel.cpp.o -c /root/hcx/hcxServer/src/Channel.cpp",
   "file": "/root/hcx/hcxServer/src/Channel.cpp"
 },
 {
   "directory": "/root/hcx/hcxServer/build/src",
-  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Connection.cpp.o -c /root/hcx/hcxServer/src/Connection.cpp",
+  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Connection.cpp.o -c /root/hcx/hcxServer/src/Connection.cpp",
   "file": "/root/hcx/hcxServer/src/Connection.cpp"
 },
 {
   "directory": "/root/hcx/hcxServer/build/src",
-  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/EventLoop.cpp.o -c /root/hcx/hcxServer/src/EventLoop.cpp",
+  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/EventLoop.cpp.o -c /root/hcx/hcxServer/src/EventLoop.cpp",
   "file": "/root/hcx/hcxServer/src/EventLoop.cpp"
 },
 {
   "directory": "/root/hcx/hcxServer/build/src",
-  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Poller.cpp.o -c /root/hcx/hcxServer/src/Poller.cpp",
+  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Poller.cpp.o -c /root/hcx/hcxServer/src/Poller.cpp",
   "file": "/root/hcx/hcxServer/src/Poller.cpp"
 },
 {
   "directory": "/root/hcx/hcxServer/build/src",
-  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Socket.cpp.o -c /root/hcx/hcxServer/src/Socket.cpp",
+  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Socket.cpp.o -c /root/hcx/hcxServer/src/Socket.cpp",
   "file": "/root/hcx/hcxServer/src/Socket.cpp"
 },
 {
   "directory": "/root/hcx/hcxServer/build/src",
-  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/TcpServer.cpp.o -c /root/hcx/hcxServer/src/TcpServer.cpp",
+  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/TcpServer.cpp.o -c /root/hcx/hcxServer/src/TcpServer.cpp",
   "file": "/root/hcx/hcxServer/src/TcpServer.cpp"
 },
 {
   "directory": "/root/hcx/hcxServer/build/src",
-  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/ThreadPool.cpp.o -c /root/hcx/hcxServer/src/ThreadPool.cpp",
+  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/ThreadPool.cpp.o -c /root/hcx/hcxServer/src/ThreadPool.cpp",
   "file": "/root/hcx/hcxServer/src/ThreadPool.cpp"
 },
 {
   "directory": "/root/hcx/hcxServer/build/src",
-  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/util.cpp.o -c /root/hcx/hcxServer/src/util.cpp",
+  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/util.cpp.o -c /root/hcx/hcxServer/src/util.cpp",
   "file": "/root/hcx/hcxServer/src/util.cpp"
 },
 {
   "directory": "/root/hcx/hcxServer/build/srchandle",
-  "command": "/usr/bin/c++  -Dpine_shareds_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o -c /root/hcx/hcxServer/srchandle/HandleRequest.cpp",
+  "command": "/usr/bin/c++  -Dpine_shareds_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o -c /root/hcx/hcxServer/srchandle/HandleRequest.cpp",
   "file": "/root/hcx/hcxServer/srchandle/HandleRequest.cpp"
 },
 {
   "directory": "/root/hcx/hcxServer/build/srchandle",
-  "command": "/usr/bin/c++  -Dpine_shareds_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shareds.dir/Sqlserver.cpp.o -c /root/hcx/hcxServer/srchandle/Sqlserver.cpp",
+  "command": "/usr/bin/c++  -Dpine_shareds_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shareds.dir/Sqlserver.cpp.o -c /root/hcx/hcxServer/srchandle/Sqlserver.cpp",
   "file": "/root/hcx/hcxServer/srchandle/Sqlserver.cpp"
 },
 {
   "directory": "/root/hcx/hcxServer/build/srchandle",
-  "command": "/usr/bin/c++  -Dpine_shareds_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shareds.dir/UserWork.cpp.o -c /root/hcx/hcxServer/srchandle/UserWork.cpp",
+  "command": "/usr/bin/c++  -Dpine_shareds_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shareds.dir/UserWork.cpp.o -c /root/hcx/hcxServer/srchandle/UserWork.cpp",
   "file": "/root/hcx/hcxServer/srchandle/UserWork.cpp"
 },
 {
   "directory": "/root/hcx/hcxServer/build/srchandle",
-  "command": "/usr/bin/c++  -Dpine_shareds_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shareds.dir/datasetWork.cpp.o -c /root/hcx/hcxServer/srchandle/datasetWork.cpp",
+  "command": "/usr/bin/c++  -Dpine_shareds_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shareds.dir/datasetWork.cpp.o -c /root/hcx/hcxServer/srchandle/datasetWork.cpp",
   "file": "/root/hcx/hcxServer/srchandle/datasetWork.cpp"
 },
 {
   "directory": "/root/hcx/hcxServer/build/srchandle",
-  "command": "/usr/bin/c++  -Dpine_shareds_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shareds.dir/modelWork.cpp.o -c /root/hcx/hcxServer/srchandle/modelWork.cpp",
+  "command": "/usr/bin/c++  -Dpine_shareds_EXPORTS -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jsoncpp -I/usr/include/jwt-cpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shareds.dir/modelWork.cpp.o -c /root/hcx/hcxServer/srchandle/modelWork.cpp",
   "file": "/root/hcx/hcxServer/srchandle/modelWork.cpp"
 },
 {
   "directory": "/root/hcx/hcxServer/build/test",
-  "command": "/usr/bin/c++   -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jwt-cpp -isystem /usr/include/jsoncpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes   -std=gnu++17 -o CMakeFiles/echo_server.dir/echo_server.cpp.o -c /root/hcx/hcxServer/test/echo_server.cpp",
+  "command": "/usr/bin/c++   -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jwt-cpp -isystem /usr/include/jsoncpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls   -std=gnu++17 -o CMakeFiles/echo_server.dir/echo_server.cpp.o -c /root/hcx/hcxServer/test/echo_server.cpp",
   "file": "/root/hcx/hcxServer/test/echo_server.cpp"
 },
 {
   "directory": "/root/hcx/hcxServer/build/test",
-  "command": "/usr/bin/c++   -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jwt-cpp -isystem /usr/include/jsoncpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes   -std=gnu++17 -o CMakeFiles/echo_clients.dir/echo_clients.cpp.o -c /root/hcx/hcxServer/test/echo_clients.cpp",
+  "command": "/usr/bin/c++   -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jwt-cpp -isystem /usr/include/jsoncpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls   -std=gnu++17 -o CMakeFiles/echo_clients.dir/echo_clients.cpp.o -c /root/hcx/hcxServer/test/echo_clients.cpp",
   "file": "/root/hcx/hcxServer/test/echo_clients.cpp"
 },
 {
   "directory": "/root/hcx/hcxServer/build/test",
-  "command": "/usr/bin/c++   -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jwt-cpp -isystem /usr/include/jsoncpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes   -std=gnu++17 -o CMakeFiles/echo_client.dir/echo_client.cpp.o -c /root/hcx/hcxServer/test/echo_client.cpp",
+  "command": "/usr/bin/c++   -I/root/hcx/hcxServer/src/include -I/root/hcx/hcxServer/test/include -I/root/hcx/hcxServer/srchandle/include -I/usr/include/jwt-cpp -isystem /usr/include/jsoncpp   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls   -std=gnu++17 -o CMakeFiles/echo_client.dir/echo_client.cpp.o -c /root/hcx/hcxServer/test/echo_client.cpp",
   "file": "/root/hcx/hcxServer/test/echo_client.cpp"
 }
 ]

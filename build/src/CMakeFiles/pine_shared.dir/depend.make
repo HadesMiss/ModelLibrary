@@ -16,6 +16,8 @@ src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../src/include/Connection.h
 src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../src/include/EventLoop.h
 src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../src/include/Socket.h
 src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../src/include/common.h
+src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../srchandle/include/DatabaseConnectionPool.h
+src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../srchandle/include/FileRAII.h
 src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../srchandle/include/HandleRequest.h
 src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../srchandle/include/SqlServer.h
 src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../srchandle/include/UserWork.h
@@ -36,6 +38,8 @@ src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../src/include/Channel.h
 src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../src/include/Connection.h
 src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../src/include/Socket.h
 src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../src/include/common.h
+src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../srchandle/include/DatabaseConnectionPool.h
+src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../srchandle/include/FileRAII.h
 src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../srchandle/include/HandleRequest.h
 src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../srchandle/include/SqlServer.h
 src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../srchandle/include/UserWork.h
@@ -57,6 +61,8 @@ src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../src/include/EventLoop.h
 src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../src/include/Poller.h
 src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../src/include/ThreadPool.h
 src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../src/include/common.h
+src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../srchandle/include/DatabaseConnectionPool.h
+src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../srchandle/include/FileRAII.h
 src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../srchandle/include/HandleRequest.h
 src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../srchandle/include/SqlServer.h
 src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../srchandle/include/UserWork.h
@@ -89,6 +95,8 @@ src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o: ../src/include/EventLoop.h
 src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o: ../src/include/TcpServer.h
 src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o: ../src/include/ThreadPool.h
 src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o: ../src/include/common.h
+src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o: ../srchandle/include/DatabaseConnectionPool.h
+src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o: ../srchandle/include/FileRAII.h
 src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o: ../srchandle/include/HandleRequest.h
 src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o: ../srchandle/include/SqlServer.h
 src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o: ../srchandle/include/UserWork.h

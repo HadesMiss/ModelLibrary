@@ -61,6 +61,7 @@
         "fstream": "cpp",
         "optional": "cpp",
         "codecvt": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "iomanip": "cpp"
     }
 }

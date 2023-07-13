@@ -6,22 +6,23 @@
 #include "datasetWork.h"
 #include <Connection.h>
 #include <Buffer.h>
+#include <DatabaseConnectionPool.h>
 
-HandleRequest::HandleRequest() : prePath("./frontend/build"){
-    hcxServer = new SqlServer();
+extern DatabaseConnectionPool pool;
+
+HandleRequest::HandleRequest(DatabaseConnectionPool* pool_) : prePath("./frontend/build"){
+    pool = pool_;
     userWork = new UserWork(hcxServer);
     printf("\n sql server success");
 }
 
 HandleRequest:: HandleRequest(std::vector<char> _request, Connection* conn, std::string _prePath) : requestRe(_request), prePath(_prePath){
-    hcxServer = new SqlServer();
     userWork = new UserWork(hcxServer);
     con_ = conn;
     translation();
 }
 
 HandleRequest::~HandleRequest(){
-    delete hcxServer;
     delete userWork;
 }
 
@@ -62,16 +63,20 @@ void HandleRequest::translation(){
         body = std::string(bodyRe.data(), bodyRe.size());
         // 处理主体部分，包括二进制数据
     }
-    if(headersMp.count("Content-Length") == 1){
-    long long length = stoi(headersMp["Content-Length"]);
-    while(bodyRe.size() < length){
-        con_->Read();
-        std::vector<char> buf_ = con_->read_buf()->bufOrigin();
-        bodyRe.insert(bodyRe.end(), buf_.begin(), buf_.end());
-        std::cout << "Message1 from client \n" << bodyRe.size()<< std::endl;
-        //sleep(5);
+    if(headersMp.count("Content-Length") == 1)
+    {
+        long long length = stoi(headersMp["Content-Length"]);
+        std::cout<<"length"<<std::endl;
+        while(bodyRe.size() < length){
+            con_->Read();
+            std::vector<char> buf_ = con_->read_buf()->bufOrigin();
+            bodyRe.insert(bodyRe.end(), buf_.begin(), buf_.end());
+            std::cout << "Message1 from client \n" << bodyRe.size()<< std::endl;
+            //sleep(5);
+        }
+        headersMp["Content-Length"] = "0";
+        body = std::string(bodyRe.data(), bodyRe.size()) ;
     }
-    body = std::string(bodyRe.data(), bodyRe.size()) ;}
 }
 
 std::string HandleRequest::response(){
@@ -107,7 +112,7 @@ std::string HandleRequest::response(){
         responseContent += "Content-Type: " + contentType + "\r\n";
         responseContent += "Content-Length: " + std::to_string(content.size()) + "\r\n";
         responseContent += "Connection: " + connection + "\r\n";
-        //responseContent += "Authorization: " + userWork->getJwtToken() + "\r\n\r\n";
+        responseContent += "Authorization: " + userWork->getJwtToken() + "\r\n\r\n";
         responseContent += content;
 
     // if (needJWT) {
@@ -117,6 +122,7 @@ std::string HandleRequest::response(){
 
     // responseContent += ("\r\n" + content + "\r\n");
     // //if(multipartUserInfo) responseContent = "";
+    pool->releaseConnection(hcxServer);
     return responseContent;
 }
 
@@ -214,11 +220,11 @@ void HandleRequest::postResponse(std::string& _content, std::string& _contentTyp
         boundary = boundary.substr(0, boundary.find("\r"));
         std::cout<<boundary<<std::endl;
         std::cout<<boundary.length()<<std::endl;
-        needJWT = true;
+        //needJWT = true;
         //multipartUserInfo = true;
         //method = "";
-        content = userWork->submitUserInfo(bodyRe, boundary);
-        contentType = "application/javascript";
+        _content = userWork->submitUserInfo(bodyRe, boundary);
+        _contentType = "application/javascript";
     }
     else if(path == "/api/modelhcx"){
         std::string filename = "onemodelt";
@@ -238,18 +244,21 @@ void HandleRequest::postResponse(std::string& _content, std::string& _contentTyp
 }
 
 std::string HandleRequest::readFile(std::string path, bool isBinary) {
-    if(isBinary == true){
-        std::ifstream file(path, std::ios::binary);
-        std::string content((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
-        file.close();
-        return content;
-    }
-    else{
-        std::ifstream file(path);
-        std::string content((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
-        file.close();
-        return content;
-    }
+    // if(isBinary == true){
+    //     std::ifstream file(path, std::ios::binary);
+    //     std::string content((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
+    //     file.close();
+    //     return content;
+    // }
+    // else{
+    //     std::ifstream file(path);
+    //     std::string content((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
+    //     file.close();
+    //     return content;
+    // }
+    fileRAII inputFile(path, isBinary);
+    return inputFile.readFile();
+
 
 }
 
@@ -260,6 +269,8 @@ void HandleRequest::setprePath(std::string _prePath){
 }
 
 void HandleRequest::setrequest(std::vector<char> _request, Connection* connn){
+    hcxServer = pool->getConnection();
+    std::cout<<"hcxS"<<std::endl;
     con_ = connn;
     requestRe = _request;
     translation();
@@ -286,13 +297,11 @@ void HandleRequest::parseURLParameters(const std::string& url){
         } else {
             value = url.substr(nameEnd + 1);
         }
-
         parameters[name] = value;
 
         if(valueEnd == std::string::npos){
             break;
         }
-
         pos = valueEnd + 1;
     }
 }

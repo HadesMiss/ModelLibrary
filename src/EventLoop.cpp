@@ -6,10 +6,11 @@
 #include <ThreadPool.h>
 #include <iostream>
 #include "HandleRequest.h"
+#include "DatabaseConnectionPool.h"
 
-EventLoop::EventLoop(){
+EventLoop::EventLoop(DatabaseConnectionPool* pool){
     poller_ = std::make_unique<Poller>();
-    testhandle = new HandleRequest();
+    testhandle = new HandleRequest(pool);
 }
 
 EventLoop::~EventLoop(){printf("\n eventloop xigou");delete testhandle;}

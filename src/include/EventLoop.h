@@ -6,7 +6,7 @@
 class EventLoop{
 public:
     DISALLOW_COPY_AND_MOVE(EventLoop);
-    EventLoop();
+    EventLoop(DatabaseConnectionPool* pool);
     ~EventLoop();
 
     void Loop(std::atomic<bool>& stop) const;

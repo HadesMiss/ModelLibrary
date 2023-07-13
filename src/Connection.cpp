@@ -100,9 +100,8 @@ RC Connection::WriteNonBlocking(){
     int sockfd = socket_->fd();
     const char* data = send_buf_->c_str();
     int data_size = send_buf_->Size();
-    std::cout<<"data_size"<<std::endl;
-    std::cout<<data_size<<std::endl;
-    sleep(2);
+    //std::cout<<"data_size"<<std::endl;
+    //std::cout<<data_size<<std::endl;
     int data_left = data_size - offset_;  // 计算剩余数据的大小
     ssize_t bytes_written = 0;
 
@@ -115,7 +114,7 @@ RC Connection::WriteNonBlocking(){
         }
         if (bytes_written == -1 && errno == EAGAIN) {
             // 数据无法完全写入，返回 RC_WRITE_INCOMPLETE，表示需要继续写入
-            std::cout<<"continue"<<std::endl;
+            //std::cout<<"continue"<<std::endl;
             return RC_UNDEFINED;
         }
         if (bytes_written == -1) {
@@ -126,14 +125,15 @@ RC Connection::WriteNonBlocking(){
         offset_ += bytes_written;  // 更新偏移量
         data_left -= bytes_written;
         std::cout<<"offset"<<std::endl;
-        std::cout<<offset_<<std::endl;
-        std::cout<<"data_left"<<std::endl;
-        std::cout<<data_left<<std::endl;
+        //std::cout<<offset_<<std::endl;
+        //std::cout<<"data_left"<<std::endl;
+        //std::cout<<data_left<<std::endl;
     }
 
     if (offset_ == data_size) {
         offset_ = 0;  // 重置偏移量为0，以便下一次重新开始写入
     }
+    std::cout<<"return"<<std::endl;
     return RC_SUCCESS;
 }
 

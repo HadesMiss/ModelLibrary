@@ -3,9 +3,14 @@
 #include "HandleRequest.h"
 #include "jwt-cpp/jwt.h"
 #include "jwt-cpp/base.h"
+#include "DatabaseConnectionPool.h"
+
+
 
 int main(){
-    TcpServer *server = new TcpServer();
+    DatabaseConnectionPool& pool = DatabaseConnectionPool::getInstance();
+    TcpServer *server = new TcpServer(&pool);
+
 
     Signal::signal(SIGINT, 
         [&]{
@@ -35,6 +40,7 @@ int main(){
         std::cout<<"get ans"<<ans.length()<<std::endl;
         std::vector<char> charVector(ans.begin(), ans.end());
         conn->Send(charVector);
+        std::cout<<"send success"<<std::endl;
     });
     server->Start();
 

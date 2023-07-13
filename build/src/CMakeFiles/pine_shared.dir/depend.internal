@@ -17,6 +17,8 @@ src/CMakeFiles/pine_shared.dir/Channel.cpp.o
  ../src/include/EventLoop.h
  ../src/include/Socket.h
  ../src/include/common.h
+ ../srchandle/include/DatabaseConnectionPool.h
+ ../srchandle/include/FileRAII.h
  ../srchandle/include/HandleRequest.h
  ../srchandle/include/SqlServer.h
  ../srchandle/include/UserWork.h
@@ -37,6 +39,8 @@ src/CMakeFiles/pine_shared.dir/Connection.cpp.o
  ../src/include/Connection.h
  ../src/include/Socket.h
  ../src/include/common.h
+ ../srchandle/include/DatabaseConnectionPool.h
+ ../srchandle/include/FileRAII.h
  ../srchandle/include/HandleRequest.h
  ../srchandle/include/SqlServer.h
  ../srchandle/include/UserWork.h
@@ -58,6 +62,8 @@ src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o
  ../src/include/Poller.h
  ../src/include/ThreadPool.h
  ../src/include/common.h
+ ../srchandle/include/DatabaseConnectionPool.h
+ ../srchandle/include/FileRAII.h
  ../srchandle/include/HandleRequest.h
  ../srchandle/include/SqlServer.h
  ../srchandle/include/UserWork.h
@@ -90,6 +96,8 @@ src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o
  ../src/include/TcpServer.h
  ../src/include/ThreadPool.h
  ../src/include/common.h
+ ../srchandle/include/DatabaseConnectionPool.h
+ ../srchandle/include/FileRAII.h
  ../srchandle/include/HandleRequest.h
  ../srchandle/include/SqlServer.h
  ../srchandle/include/UserWork.h

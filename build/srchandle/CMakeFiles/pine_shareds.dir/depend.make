@@ -4,6 +4,8 @@
 srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o: ../src/include/Buffer.h
 srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o: ../src/include/Connection.h
 srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o: ../src/include/common.h
+srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o: ../srchandle/include/DatabaseConnectionPool.h
+srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o: ../srchandle/include/FileRAII.h
 srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o: ../srchandle/include/HandleRequest.h
 srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o: ../srchandle/include/SqlServer.h
 srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o: ../srchandle/include/UserWork.h

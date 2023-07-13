@@ -4,11 +4,12 @@
 #include <unordered_map>
 #include <vector>
 #include <memory>
+#include "DatabaseConnectionPool.h"
 
 class TcpServer{
 public:
     DISALLOW_COPY_AND_MOVE(TcpServer);
-    TcpServer();
+    TcpServer(DatabaseConnectionPool* pool);
     ~TcpServer();
     void Start();
 
@@ -21,6 +22,7 @@ public:
 private:
     std::unique_ptr<EventLoop> main_reactor_;
     std::unique_ptr<Acceptor> acceptor_;
+    DatabaseConnectionPool* pool_;
 
     std::unordered_map<int, std::unique_ptr<Connection>> connections_;
     std::vector<std::unique_ptr<EventLoop>> sub_reactors_;

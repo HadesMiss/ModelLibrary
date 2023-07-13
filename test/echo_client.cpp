@@ -27,11 +27,12 @@ int main() {
   Connection *conn = new Connection(sock->fd(), nullptr);
 
   while (true) {
-    std::string input = readFile();
+    std::string input = "GET / HTTP";
     std::cout<<"dgrdgrgdr"<<std::endl;
     std::cout<<input<<std::endl;
     std::cout<<"dasgdgdg"<<std::endl;
-    conn->set_send_buf(input);
+    std::vector<char> tt(input.begin(), input.end());
+    conn->set_send_buf(tt);
     conn->Write();
     if (conn->state() == Connection::State::Closed) {
       printf("\n conn closed");

@@ -179,11 +179,11 @@ void UserWork::parseMultipartFormDate(std::vector<char> &formData, std::string b
     std::vector<std::vector<char>> fields;
     auto startPos = std::search(formData.begin(), formData.end(), boundary.begin(), boundary.end()) + boundary.size() + 2;
     auto endPos = std::search(startPos, formData.end(), boundary.begin(), boundary.end()) - 8;
-
     while(endPos != formData.end()){
         std::cout<<"startPos1"<<std::endl;
-        fields.push_back(std::vector<char>(startPos, endPos));
-        std::cout<<std::string(std::vector<char>(startPos, endPos).data());
+        std::vector<char> temp = std::vector<char>(startPos, endPos);
+        fields.push_back(temp);
+        std::cout<<std::string(temp.begin(), temp.end());
         std::cout<<"startPos2"<<std::endl;
 
         startPos = std::search(endPos + 8, formData.end(), boundary.begin(), boundary.end()) + boundary.size() + 2;
@@ -200,7 +200,7 @@ void UserWork::parseMultipartFormDate(std::vector<char> &formData, std::string b
         std::string nameS = "name=\"";
         std::string nameE = "\"";
         std::string valueS = "\r\n\r\n";
-        std::string valueE = "\r\n";
+        std::string valueE = "\r\n------";
         auto namePos = std::search(field.begin(), field.end(), nameS.begin(), nameS.end()) + 6;
         auto nameEndPos = std::search(namePos, field.end(), nameE.begin(), nameE.end());
 
@@ -209,8 +209,8 @@ void UserWork::parseMultipartFormDate(std::vector<char> &formData, std::string b
 
         std::vector<char> fieldName = std::vector<char>(namePos, nameEndPos);
         std::vector<char> fieldValue = std::vector<char>(valuePos, valueEndPos);
-        std::string nameStr = std::string(fieldName.data(), fieldName.size());
-        std::string valueStr = std::string(fieldValue.data(), fieldValue.size());
+        std::string nameStr = std::string(fieldName.begin(), fieldName.end());
+        std::string valueStr = std::string(fieldValue.begin(), fieldValue.end());
         std::cout<<"startPos"<<std::endl;
         std::cout<<nameStr<<std::endl;
         std::cout<<valueStr<<std::endl;

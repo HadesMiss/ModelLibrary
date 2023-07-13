@@ -6,10 +6,12 @@
 #include "SqlServer.h"
 #include "UserWork.h"
 #include <Connection.h>
+#include <FileRAII.h>
+#include "DatabaseConnectionPool.h"
 
 class HandleRequest{
 public:
-    HandleRequest();
+    HandleRequest(DatabaseConnectionPool* pool_);
     explicit HandleRequest(std::vector<char> _request, Connection* conn, std::string _prePath = "./frontend/build");
     void translation();
     std::string response();
@@ -25,7 +27,7 @@ public:
 private:
 
     void replaceSpaces();
-
+    DatabaseConnectionPool* pool;
     Connection* con_;
     std::vector<char> requestRe;
     std::string method;

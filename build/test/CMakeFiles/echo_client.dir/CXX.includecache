@@ -115,6 +115,8 @@ SqlServer.h
 ../srchandle/include/SqlServer.h
 UserWork.h
 ../srchandle/include/UserWork.h
+Connection.h
+-
 
 ../srchandle/include/SqlServer.h
 iostream

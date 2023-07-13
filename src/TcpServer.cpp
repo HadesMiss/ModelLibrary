@@ -6,8 +6,9 @@
 #include <cassert>
 #include <unistd.h>
 
-TcpServer::TcpServer(){
-    main_reactor_ = std::make_unique<EventLoop>();
+
+TcpServer::TcpServer(DatabaseConnectionPool* pool){
+    main_reactor_ = std::make_unique<EventLoop>(pool);
     acceptor_ = std::make_unique<Acceptor>(main_reactor_.get());
     std::function<void(int)> cb = std::bind(&TcpServer::NewConnection, this, std::placeholders::_1);
     acceptor_->set_new_connection_callback(cb);
@@ -15,7 +16,7 @@ TcpServer::TcpServer(){
     unsigned int size = std::thread::hardware_concurrency() / 4;
     thread_pool_ = std::make_unique<ThreadPool>(size);
     for(size_t i = 0; i < size; i++){
-        std::unique_ptr<EventLoop> sub_reactor_ = std::make_unique<EventLoop>();
+        std::unique_ptr<EventLoop> sub_reactor_ = std::make_unique<EventLoop>(pool);
         sub_reactors_.push_back(std::move(sub_reactor_));
     }
 }
