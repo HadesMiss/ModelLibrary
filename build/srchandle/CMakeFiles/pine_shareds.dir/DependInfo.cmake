@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/root/hcx/hcxServer/srchandle/HandleRequest.cpp" "/root/hcx/hcxServer/build/srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o"
+  "/root/hcx/hcxServer/srchandle/RedisDb.cpp" "/root/hcx/hcxServer/build/srchandle/CMakeFiles/pine_shareds.dir/RedisDb.cpp.o"
   "/root/hcx/hcxServer/srchandle/Sqlserver.cpp" "/root/hcx/hcxServer/build/srchandle/CMakeFiles/pine_shareds.dir/Sqlserver.cpp.o"
   "/root/hcx/hcxServer/srchandle/UserWork.cpp" "/root/hcx/hcxServer/build/srchandle/CMakeFiles/pine_shareds.dir/UserWork.cpp.o"
   "/root/hcx/hcxServer/srchandle/datasetWork.cpp" "/root/hcx/hcxServer/build/srchandle/CMakeFiles/pine_shareds.dir/datasetWork.cpp.o"
@@ -24,6 +25,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../srchandle/include"
   "/usr/include/jsoncpp"
   "/usr/include/jwt-cpp"
+  "/usr/local/hiredis"
   )
 
 # Targets to which this target links.

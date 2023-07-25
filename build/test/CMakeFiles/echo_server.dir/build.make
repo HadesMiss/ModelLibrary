@@ -84,6 +84,7 @@ bin/echo_server: lib/libpine_shareds.so
 bin/echo_server: /usr/lib/x86_64-linux-gnu/libssl.so
 bin/echo_server: /usr/lib/x86_64-linux-gnu/libcrypto.so
 bin/echo_server: /usr/lib/x86_64-linux-gnu/libmysqlcppconn.so
+bin/echo_server: /usr/local/lib/libhiredis.a
 bin/echo_server: /usr/lib/x86_64-linux-gnu/libjsoncpp.so.1.7.4
 bin/echo_server: /usr/lib/x86_64-linux-gnu/libssl.so
 bin/echo_server: /usr/lib/x86_64-linux-gnu/libcrypto.so

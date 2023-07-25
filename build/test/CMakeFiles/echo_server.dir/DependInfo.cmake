@@ -14,6 +14,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../test/include"
   "../srchandle/include"
   "/usr/include/jwt-cpp"
+  "/usr/local/hiredis"
   "/usr/include/jsoncpp"
   )
 

@@ -7,13 +7,13 @@
 #include <Connection.h>
 #include <Buffer.h>
 #include <DatabaseConnectionPool.h>
-
-extern DatabaseConnectionPool pool;
+#include "DatabaseConnectionPool1.h"
 
 HandleRequest::HandleRequest(DatabaseConnectionPool* pool_) : prePath("./frontend/build"){
     pool = pool_;
     userWork = new UserWork(hcxServer);
     printf("\n sql server success");
+    myRedis = std::make_unique<RedisDb>();
 }
 
 HandleRequest:: HandleRequest(std::vector<char> _request, Connection* conn, std::string _prePath) : requestRe(_request), prePath(_prePath){
@@ -44,7 +44,7 @@ void HandleRequest::translation(){
 
     std::istringstream lineStream(requestLine);
     lineStream >> method >> path >> httpVersion;
-
+    originPath = path;
     replaceSpaces();
 
     // 解析报文头部
@@ -137,19 +137,43 @@ void HandleRequest::getResponse(std::string& _content, std::string& _contentType
         _contentType = "text/html";
     }
     else if(path == "/api/modelList"){
-        _content = modelListWork(parameters, hcxServer);
+        if(myRedis->check(originPath)){
+            _content = myRedis->getValue(originPath);
+        }
+        else{
+            _content = modelListWork(parameters, hcxServer);
+            myRedis->set(originPath, _content);
+        }
         _contentType = "application/javascript";
     }
     else if(path == "/api/modelLabel"){
-        _content = modelLabelWork(hcxServer);
+        if(myRedis->check(originPath)){
+            _content = myRedis->getValue(originPath);
+        }
+        else{
+            _content = modelLabelWork(hcxServer);
+            myRedis->set(originPath, _content);
+        }
         _contentType = "application/javascript";
     }
     else if(path == "/api/datasetList"){
-        _content = datasetListWork(parameters, hcxServer);
+        if(myRedis->check(originPath)){
+            _content = myRedis->getValue(originPath);
+        }
+        else{
+            _content = datasetListWork(parameters, hcxServer);
+            myRedis->set(originPath, _content);
+        }
         _contentType = "application/javascript";
     }
     else if(path == "/api/datasetLabel"){
-        _content = datasetLabelWork(hcxServer);
+        if(myRedis->check(originPath)){
+            _content = myRedis->getValue(originPath);
+        }
+        else{
+            _content = datasetLabelWork(hcxServer);
+            myRedis->set(originPath, _content);
+        }
         _contentType = "application/javascript";
     }
     else if(path.find(".png") != std::string::npos){

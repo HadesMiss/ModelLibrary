@@ -20,6 +20,7 @@ src/CMakeFiles/pine_shared.dir/Channel.cpp.o
  ../srchandle/include/DatabaseConnectionPool.h
  ../srchandle/include/FileRAII.h
  ../srchandle/include/HandleRequest.h
+ ../srchandle/include/RedisDb.h
  ../srchandle/include/SqlServer.h
  ../srchandle/include/UserWork.h
  /root/hcx/hcxServer/src/Channel.cpp
@@ -42,6 +43,7 @@ src/CMakeFiles/pine_shared.dir/Connection.cpp.o
  ../srchandle/include/DatabaseConnectionPool.h
  ../srchandle/include/FileRAII.h
  ../srchandle/include/HandleRequest.h
+ ../srchandle/include/RedisDb.h
  ../srchandle/include/SqlServer.h
  ../srchandle/include/UserWork.h
  /root/hcx/hcxServer/src/Connection.cpp
@@ -65,6 +67,7 @@ src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o
  ../srchandle/include/DatabaseConnectionPool.h
  ../srchandle/include/FileRAII.h
  ../srchandle/include/HandleRequest.h
+ ../srchandle/include/RedisDb.h
  ../srchandle/include/SqlServer.h
  ../srchandle/include/UserWork.h
  /root/hcx/hcxServer/src/EventLoop.cpp
@@ -99,6 +102,7 @@ src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o
  ../srchandle/include/DatabaseConnectionPool.h
  ../srchandle/include/FileRAII.h
  ../srchandle/include/HandleRequest.h
+ ../srchandle/include/RedisDb.h
  ../srchandle/include/SqlServer.h
  ../srchandle/include/UserWork.h
  /root/hcx/hcxServer/src/TcpServer.cpp

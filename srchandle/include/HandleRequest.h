@@ -8,6 +8,7 @@
 #include <Connection.h>
 #include <FileRAII.h>
 #include "DatabaseConnectionPool.h"
+#include "RedisDb.h"
 
 class HandleRequest{
 public:
@@ -48,6 +49,7 @@ private:
     std::string connection;
     std::string boundary;
     std::string body = "";
-
+    std::string originPath;
+    std::unique_ptr<RedisDb> myRedis;
 
 };

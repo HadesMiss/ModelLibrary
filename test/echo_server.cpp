@@ -5,12 +5,9 @@
 #include "jwt-cpp/base.h"
 #include "DatabaseConnectionPool.h"
 
-
-
 int main(){
     DatabaseConnectionPool& pool = DatabaseConnectionPool::getInstance();
     TcpServer *server = new TcpServer(&pool);
-
 
     Signal::signal(SIGINT, 
         [&]{

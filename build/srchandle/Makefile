@@ -152,6 +152,33 @@ HandleRequest.cpp.s:
 	cd /root/hcx/hcxServer/build && $(MAKE) -f srchandle/CMakeFiles/pine_shareds.dir/build.make srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.s
 .PHONY : HandleRequest.cpp.s
 
+RedisDb.o: RedisDb.cpp.o
+
+.PHONY : RedisDb.o
+
+# target to build an object file
+RedisDb.cpp.o:
+	cd /root/hcx/hcxServer/build && $(MAKE) -f srchandle/CMakeFiles/pine_shareds.dir/build.make srchandle/CMakeFiles/pine_shareds.dir/RedisDb.cpp.o
+.PHONY : RedisDb.cpp.o
+
+RedisDb.i: RedisDb.cpp.i
+
+.PHONY : RedisDb.i
+
+# target to preprocess a source file
+RedisDb.cpp.i:
+	cd /root/hcx/hcxServer/build && $(MAKE) -f srchandle/CMakeFiles/pine_shareds.dir/build.make srchandle/CMakeFiles/pine_shareds.dir/RedisDb.cpp.i
+.PHONY : RedisDb.cpp.i
+
+RedisDb.s: RedisDb.cpp.s
+
+.PHONY : RedisDb.s
+
+# target to generate assembly for a file
+RedisDb.cpp.s:
+	cd /root/hcx/hcxServer/build && $(MAKE) -f srchandle/CMakeFiles/pine_shareds.dir/build.make srchandle/CMakeFiles/pine_shareds.dir/RedisDb.cpp.s
+.PHONY : RedisDb.cpp.s
+
 Sqlserver.o: Sqlserver.cpp.o
 
 .PHONY : Sqlserver.o
@@ -272,6 +299,9 @@ help:
 	@echo "... HandleRequest.o"
 	@echo "... HandleRequest.i"
 	@echo "... HandleRequest.s"
+	@echo "... RedisDb.o"
+	@echo "... RedisDb.i"
+	@echo "... RedisDb.s"
 	@echo "... Sqlserver.o"
 	@echo "... Sqlserver.i"
 	@echo "... Sqlserver.s"

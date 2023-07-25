@@ -29,6 +29,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../srchandle/include"
   "/usr/include/jsoncpp"
   "/usr/include/jwt-cpp"
+  "/usr/local/hiredis"
   )
 
 # Targets to which this target links.

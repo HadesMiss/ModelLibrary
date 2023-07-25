@@ -5,8 +5,10 @@ srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o: ../src/include/Buffer
 srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o: ../src/include/Connection.h
 srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o: ../src/include/common.h
 srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o: ../srchandle/include/DatabaseConnectionPool.h
+srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o: ../srchandle/include/DatabaseConnectionPool1.h
 srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o: ../srchandle/include/FileRAII.h
 srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o: ../srchandle/include/HandleRequest.h
+srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o: ../srchandle/include/RedisDb.h
 srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o: ../srchandle/include/SqlServer.h
 srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o: ../srchandle/include/UserWork.h
 srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o: ../srchandle/include/datasetWork.h
@@ -22,6 +24,9 @@ srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o: /usr/include/jsoncpp/
 srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o: /usr/include/jsoncpp/json/value.h
 srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o: /usr/include/jsoncpp/json/version.h
 srchandle/CMakeFiles/pine_shareds.dir/HandleRequest.cpp.o: /usr/include/jsoncpp/json/writer.h
+
+srchandle/CMakeFiles/pine_shareds.dir/RedisDb.cpp.o: ../srchandle/include/RedisDb.h
+srchandle/CMakeFiles/pine_shareds.dir/RedisDb.cpp.o: ../srchandle/RedisDb.cpp
 
 srchandle/CMakeFiles/pine_shareds.dir/Sqlserver.cpp.o: ../srchandle/include/SqlServer.h
 srchandle/CMakeFiles/pine_shareds.dir/Sqlserver.cpp.o: ../srchandle/Sqlserver.cpp

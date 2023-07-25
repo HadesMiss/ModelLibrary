@@ -5,13 +5,13 @@
 #include<mutex>
 
 
-class DatabaseConnectionPool{
+class DatabaseConnectionPool1{
 private:
-    DatabaseConnectionPool() {
+    DatabaseConnectionPool1() {
         initializePool();
     }
 
-     ~DatabaseConnectionPool() {
+     ~DatabaseConnectionPool1() {
         for (SqlServer* connection : connections) {
             delete(connection);
         }
@@ -36,13 +36,13 @@ private:
     std::vector<SqlServer*> connections;
     std::mutex connectionsMutex;
 public:
-    static DatabaseConnectionPool& getInstance(){
-        static DatabaseConnectionPool instance;
+    static DatabaseConnectionPool1& getInstance(){
+        static DatabaseConnectionPool1 instance;
         return instance;
     }
 
     SqlServer* getConnection() {
-        //std::cout<<"getConnection"<<std::endl;
+        std::cout<<"getConnection"<<std::endl;
         std::lock_guard<std::mutex> lock(connectionsMutex);
         if (connections.empty()) {
             SqlServer* connection = createConnection();

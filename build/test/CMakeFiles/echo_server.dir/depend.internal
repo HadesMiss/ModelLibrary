@@ -14,6 +14,7 @@ test/CMakeFiles/echo_server.dir/echo_server.cpp.o
  ../srchandle/include/DatabaseConnectionPool.h
  ../srchandle/include/FileRAII.h
  ../srchandle/include/HandleRequest.h
+ ../srchandle/include/RedisDb.h
  ../srchandle/include/SqlServer.h
  ../srchandle/include/UserWork.h
  /root/hcx/hcxServer/test/echo_server.cpp

@@ -143,6 +143,14 @@ FileRAII.h
 -
 DatabaseConnectionPool.h
 ../srchandle/include/DatabaseConnectionPool.h
+RedisDb.h
+../srchandle/include/RedisDb.h
+
+../srchandle/include/RedisDb.h
+hiredis/hiredis.h
+-
+string
+-
 
 ../srchandle/include/SqlServer.h
 iostream

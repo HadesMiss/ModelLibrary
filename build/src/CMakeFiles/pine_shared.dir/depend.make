@@ -19,6 +19,7 @@ src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../src/include/common.h
 src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../srchandle/include/DatabaseConnectionPool.h
 src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../srchandle/include/FileRAII.h
 src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../srchandle/include/HandleRequest.h
+src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../srchandle/include/RedisDb.h
 src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../srchandle/include/SqlServer.h
 src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../srchandle/include/UserWork.h
 src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../src/Channel.cpp
@@ -41,6 +42,7 @@ src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../src/include/common.h
 src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../srchandle/include/DatabaseConnectionPool.h
 src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../srchandle/include/FileRAII.h
 src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../srchandle/include/HandleRequest.h
+src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../srchandle/include/RedisDb.h
 src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../srchandle/include/SqlServer.h
 src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../srchandle/include/UserWork.h
 src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../src/Connection.cpp
@@ -64,6 +66,7 @@ src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../src/include/common.h
 src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../srchandle/include/DatabaseConnectionPool.h
 src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../srchandle/include/FileRAII.h
 src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../srchandle/include/HandleRequest.h
+src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../srchandle/include/RedisDb.h
 src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../srchandle/include/SqlServer.h
 src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../srchandle/include/UserWork.h
 src/CMakeFiles/pine_shared.dir/EventLoop.cpp.o: ../src/EventLoop.cpp
@@ -98,6 +101,7 @@ src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o: ../src/include/common.h
 src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o: ../srchandle/include/DatabaseConnectionPool.h
 src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o: ../srchandle/include/FileRAII.h
 src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o: ../srchandle/include/HandleRequest.h
+src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o: ../srchandle/include/RedisDb.h
 src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o: ../srchandle/include/SqlServer.h
 src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o: ../srchandle/include/UserWork.h
 src/CMakeFiles/pine_shared.dir/TcpServer.cpp.o: ../src/TcpServer.cpp

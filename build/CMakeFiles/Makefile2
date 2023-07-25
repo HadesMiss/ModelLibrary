@@ -163,12 +163,12 @@ src/CMakeFiles/pine_shared.dir/clean:
 srchandle/CMakeFiles/pine_shareds.dir/all:
 	$(MAKE) -f srchandle/CMakeFiles/pine_shareds.dir/build.make srchandle/CMakeFiles/pine_shareds.dir/depend
 	$(MAKE) -f srchandle/CMakeFiles/pine_shareds.dir/build.make srchandle/CMakeFiles/pine_shareds.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/hcx/hcxServer/build/CMakeFiles --progress-num=18,19,20,21,22,23 "Built target pine_shareds"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/hcx/hcxServer/build/CMakeFiles --progress-num=18,19,20,21,22,23,24 "Built target pine_shareds"
 .PHONY : srchandle/CMakeFiles/pine_shareds.dir/all
 
 # Build rule for subdir invocation for target.
 srchandle/CMakeFiles/pine_shareds.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/hcx/hcxServer/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/hcx/hcxServer/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 srchandle/CMakeFiles/pine_shareds.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/hcx/hcxServer/build/CMakeFiles 0
 .PHONY : srchandle/CMakeFiles/pine_shareds.dir/rule
@@ -196,7 +196,7 @@ test/CMakeFiles/echo_server.dir/all: src/CMakeFiles/pine_shared.dir/all
 
 # Build rule for subdir invocation for target.
 test/CMakeFiles/echo_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/hcx/hcxServer/build/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/hcx/hcxServer/build/CMakeFiles 20
 	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/echo_server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/hcx/hcxServer/build/CMakeFiles 0
 .PHONY : test/CMakeFiles/echo_server.dir/rule
@@ -224,7 +224,7 @@ test/CMakeFiles/echo_clients.dir/all: src/CMakeFiles/pine_shared.dir/all
 
 # Build rule for subdir invocation for target.
 test/CMakeFiles/echo_clients.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/hcx/hcxServer/build/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/hcx/hcxServer/build/CMakeFiles 20
 	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/echo_clients.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/hcx/hcxServer/build/CMakeFiles 0
 .PHONY : test/CMakeFiles/echo_clients.dir/rule
@@ -252,7 +252,7 @@ test/CMakeFiles/echo_client.dir/all: src/CMakeFiles/pine_shared.dir/all
 
 # Build rule for subdir invocation for target.
 test/CMakeFiles/echo_client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/hcx/hcxServer/build/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/hcx/hcxServer/build/CMakeFiles 20
 	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/echo_client.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/hcx/hcxServer/build/CMakeFiles 0
 .PHONY : test/CMakeFiles/echo_client.dir/rule
