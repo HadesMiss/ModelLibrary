@@ -39,7 +39,7 @@ void RedisDb::set(std::string key, std::string value){
 }
 
 int RedisDb::check(std::string key){
-    reply = (redisReply *)redisCommand(c, "EXISTS %s", key);
+    reply = (redisReply *)redisCommand(c, "EXISTS %s", key.c_str());
         if (reply == NULL) {
         printf("Command execution error\n");
         // 处理命令执行错误
@@ -58,7 +58,7 @@ int RedisDb::check(std::string key){
 }
 
 std::string RedisDb::getValue(std::string key){
-    reply = (redisReply *)redisCommand(c, "GET %s", key);
+    reply = (redisReply *)redisCommand(c, "GET %s", key.c_str());
     if (reply == NULL) {
         printf("Command execution error\n");
         // 处理命令执行错误
@@ -75,4 +75,46 @@ std::string RedisDb::getValue(std::string key){
     }
     freeReplyObject(reply);
     return value;
+}
+
+std::string RedisDb::bpop(std::string message_key){
+    std::string temp; 
+    reply = (redisReply*)redisCommand(c, "BLPOP %s 0", message_key.c_str());
+    if(reply != nullptr){
+        if(reply->type == REDIS_REPLY_ARRAY && reply->elements == 2){
+            temp = reply->element[1]->str;
+        }
+        else{
+            std::cerr << "faid to read message from redis" <<std::endl;
+        }
+    }
+    else{
+        std::cerr << "faid to read message from redis" <<std::endl;
+    }
+    freeReplyObject(reply);
+    return temp;
+}
+
+bool RedisDb::getLock(std::string message_lock){
+    reply = (redisReply*)redisCommand(c, "SETNX %s 1", message_lock.c_str());
+    if(reply != nullptr && reply->type == REDIS_REPLY_INTEGER && reply->integer == 1){
+        freeReplyObject(reply);
+        reply = (redisReply*)redisCommand(c, "EXPIRE %s %d", message_lock.c_str(), 600);
+        if (reply != nullptr && reply->type == REDIS_REPLY_INTEGER && reply->integer == 1) {
+            freeReplyObject(reply);
+            return true;
+        }
+    }
+    freeReplyObject(reply);
+    return false;
+}
+
+void RedisDb::push(std::string message_key, std::string& message){
+    reply = (redisReply*)redisCommand(c, "LPUSH %s %s", message_key.c_str(), message.c_str());
+    freeReplyObject(reply);
+}
+
+void RedisDb::delLock(std::string message_lock){
+    reply = (redisReply*)redisCommand(c, "DEL %s", message_lock.c_str());
+    freeReplyObject(reply);
 }

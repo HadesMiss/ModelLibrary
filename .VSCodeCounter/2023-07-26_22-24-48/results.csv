@@ -1,0 +1,25 @@
+"filename", "language", "CMake", "CMake Cache", "comment", "blank", "total"
+"/root/hcx/hcxServer/build/CMakeCache.txt", "CMake Cache", 0, 382, 0, 79, 461
+"/root/hcx/hcxServer/build/CMakeFiles/3.16.3/CMakeCCompiler.cmake", "CMake", 60, 0, 0, 17, 77
+"/root/hcx/hcxServer/build/CMakeFiles/3.16.3/CMakeCXXCompiler.cmake", "CMake", 70, 0, 0, 19, 89
+"/root/hcx/hcxServer/build/CMakeFiles/3.16.3/CMakeSystem.cmake", "CMake", 10, 0, 0, 6, 16
+"/root/hcx/hcxServer/build/CMakeFiles/CMakeDirectoryInformation.cmake", "CMake", 12, 0, 0, 5, 17
+"/root/hcx/hcxServer/build/CMakeFiles/Makefile.cmake", "CMake", 64, 0, 0, 6, 70
+"/root/hcx/hcxServer/build/cmake_install.cmake", "CMake", 48, 0, 0, 10, 58
+"/root/hcx/hcxServer/build/src/CMakeFiles/CMakeDirectoryInformation.cmake", "CMake", 12, 0, 0, 5, 17
+"/root/hcx/hcxServer/build/src/CMakeFiles/pine_shared.dir/DependInfo.cmake", "CMake", 36, 0, 0, 5, 41
+"/root/hcx/hcxServer/build/src/CMakeFiles/pine_shared.dir/cmake_clean.cmake", "CMake", 18, 0, 0, 2, 20
+"/root/hcx/hcxServer/build/src/cmake_install.cmake", "CMake", 33, 0, 0, 7, 40
+"/root/hcx/hcxServer/build/srchandle/CMakeFiles/CMakeDirectoryInformation.cmake", "CMake", 12, 0, 0, 5, 17
+"/root/hcx/hcxServer/build/srchandle/CMakeFiles/pine_shareds.dir/DependInfo.cmake", "CMake", 32, 0, 0, 5, 37
+"/root/hcx/hcxServer/build/srchandle/CMakeFiles/pine_shareds.dir/cmake_clean.cmake", "CMake", 14, 0, 0, 2, 16
+"/root/hcx/hcxServer/build/srchandle/cmake_install.cmake", "CMake", 33, 0, 0, 7, 40
+"/root/hcx/hcxServer/build/test/CMakeFiles/CMakeDirectoryInformation.cmake", "CMake", 12, 0, 0, 5, 17
+"/root/hcx/hcxServer/build/test/CMakeFiles/echo_client.dir/DependInfo.cmake", "CMake", 25, 0, 0, 4, 29
+"/root/hcx/hcxServer/build/test/CMakeFiles/echo_client.dir/cmake_clean.cmake", "CMake", 9, 0, 0, 2, 11
+"/root/hcx/hcxServer/build/test/CMakeFiles/echo_clients.dir/DependInfo.cmake", "CMake", 25, 0, 0, 4, 29
+"/root/hcx/hcxServer/build/test/CMakeFiles/echo_clients.dir/cmake_clean.cmake", "CMake", 9, 0, 0, 2, 11
+"/root/hcx/hcxServer/build/test/CMakeFiles/echo_server.dir/DependInfo.cmake", "CMake", 25, 0, 0, 4, 29
+"/root/hcx/hcxServer/build/test/CMakeFiles/echo_server.dir/cmake_clean.cmake", "CMake", 9, 0, 0, 2, 11
+"/root/hcx/hcxServer/build/test/cmake_install.cmake", "CMake", 33, 0, 0, 7, 40
+"Total", "-", 601, 382, 0, 210, 1193

@@ -189,6 +189,10 @@ jwt-cpp/base.h
 /root/hcx/hcxServer/test/jwt-cpp/base.h
 DatabaseConnectionPool.h
 /root/hcx/hcxServer/test/DatabaseConnectionPool.h
+RedisDb.h
+/root/hcx/hcxServer/test/RedisDb.h
+sys/wait.h
+-
 
 /usr/include/jsoncpp/json/allocator.h
 cstring

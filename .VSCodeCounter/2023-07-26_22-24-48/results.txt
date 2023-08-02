@@ -1,0 +1,70 @@
+Date : 2023-07-26 22:24:48
+Directory : /root/hcx/hcxServer
+Total : 23 files,  983 codes, 0 comments, 210 blanks, all 1193 lines
+
+Languages
++-------------+------------+------------+------------+------------+------------+
+| language    | files      | code       | comment    | blank      | total      |
++-------------+------------+------------+------------+------------+------------+
+| CMake       |         22 |        601 |          0 |        131 |        732 |
+| CMake Cache |          1 |        382 |          0 |         79 |        461 |
++-------------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                              | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                 |         23 |        983 |          0 |        210 |      1,193 |
+| build                                                                             |         23 |        983 |          0 |        210 |      1,193 |
+| build (Files)                                                                     |          2 |        430 |          0 |         89 |        519 |
+| build/CMakeFiles                                                                  |          5 |        216 |          0 |         53 |        269 |
+| build/CMakeFiles (Files)                                                          |          2 |         76 |          0 |         11 |         87 |
+| build/CMakeFiles/3.16.3                                                           |          3 |        140 |          0 |         42 |        182 |
+| build/src                                                                         |          4 |         99 |          0 |         19 |        118 |
+| build/src (Files)                                                                 |          1 |         33 |          0 |          7 |         40 |
+| build/src/CMakeFiles                                                              |          3 |         66 |          0 |         12 |         78 |
+| build/src/CMakeFiles (Files)                                                      |          1 |         12 |          0 |          5 |         17 |
+| build/src/CMakeFiles/pine_shared.dir                                              |          2 |         54 |          0 |          7 |         61 |
+| build/srchandle                                                                   |          4 |         91 |          0 |         19 |        110 |
+| build/srchandle (Files)                                                           |          1 |         33 |          0 |          7 |         40 |
+| build/srchandle/CMakeFiles                                                        |          3 |         58 |          0 |         12 |         70 |
+| build/srchandle/CMakeFiles (Files)                                                |          1 |         12 |          0 |          5 |         17 |
+| build/srchandle/CMakeFiles/pine_shareds.dir                                       |          2 |         46 |          0 |          7 |         53 |
+| build/test                                                                        |          8 |        147 |          0 |         30 |        177 |
+| build/test (Files)                                                                |          1 |         33 |          0 |          7 |         40 |
+| build/test/CMakeFiles                                                             |          7 |        114 |          0 |         23 |        137 |
+| build/test/CMakeFiles (Files)                                                     |          1 |         12 |          0 |          5 |         17 |
+| build/test/CMakeFiles/echo_client.dir                                             |          2 |         34 |          0 |          6 |         40 |
+| build/test/CMakeFiles/echo_clients.dir                                            |          2 |         34 |          0 |          6 |         40 |
+| build/test/CMakeFiles/echo_server.dir                                             |          2 |         34 |          0 |          6 |         40 |
++-----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------+-------------+------------+------------+------------+------------+
+| filename                                                                          | language    | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------+-------------+------------+------------+------------+------------+
+| /root/hcx/hcxServer/build/CMakeCache.txt                                          | CMake Cache |        382 |          0 |         79 |        461 |
+| /root/hcx/hcxServer/build/CMakeFiles/3.16.3/CMakeCCompiler.cmake                  | CMake       |         60 |          0 |         17 |         77 |
+| /root/hcx/hcxServer/build/CMakeFiles/3.16.3/CMakeCXXCompiler.cmake                | CMake       |         70 |          0 |         19 |         89 |
+| /root/hcx/hcxServer/build/CMakeFiles/3.16.3/CMakeSystem.cmake                     | CMake       |         10 |          0 |          6 |         16 |
+| /root/hcx/hcxServer/build/CMakeFiles/CMakeDirectoryInformation.cmake              | CMake       |         12 |          0 |          5 |         17 |
+| /root/hcx/hcxServer/build/CMakeFiles/Makefile.cmake                               | CMake       |         64 |          0 |          6 |         70 |
+| /root/hcx/hcxServer/build/cmake_install.cmake                                     | CMake       |         48 |          0 |         10 |         58 |
+| /root/hcx/hcxServer/build/src/CMakeFiles/CMakeDirectoryInformation.cmake          | CMake       |         12 |          0 |          5 |         17 |
+| /root/hcx/hcxServer/build/src/CMakeFiles/pine_shared.dir/DependInfo.cmake         | CMake       |         36 |          0 |          5 |         41 |
+| /root/hcx/hcxServer/build/src/CMakeFiles/pine_shared.dir/cmake_clean.cmake        | CMake       |         18 |          0 |          2 |         20 |
+| /root/hcx/hcxServer/build/src/cmake_install.cmake                                 | CMake       |         33 |          0 |          7 |         40 |
+| /root/hcx/hcxServer/build/srchandle/CMakeFiles/CMakeDirectoryInformation.cmake    | CMake       |         12 |          0 |          5 |         17 |
+| /root/hcx/hcxServer/build/srchandle/CMakeFiles/pine_shareds.dir/DependInfo.cmake  | CMake       |         32 |          0 |          5 |         37 |
+| /root/hcx/hcxServer/build/srchandle/CMakeFiles/pine_shareds.dir/cmake_clean.cmake | CMake       |         14 |          0 |          2 |         16 |
+| /root/hcx/hcxServer/build/srchandle/cmake_install.cmake                           | CMake       |         33 |          0 |          7 |         40 |
+| /root/hcx/hcxServer/build/test/CMakeFiles/CMakeDirectoryInformation.cmake         | CMake       |         12 |          0 |          5 |         17 |
+| /root/hcx/hcxServer/build/test/CMakeFiles/echo_client.dir/DependInfo.cmake        | CMake       |         25 |          0 |          4 |         29 |
+| /root/hcx/hcxServer/build/test/CMakeFiles/echo_client.dir/cmake_clean.cmake       | CMake       |          9 |          0 |          2 |         11 |
+| /root/hcx/hcxServer/build/test/CMakeFiles/echo_clients.dir/DependInfo.cmake       | CMake       |         25 |          0 |          4 |         29 |
+| /root/hcx/hcxServer/build/test/CMakeFiles/echo_clients.dir/cmake_clean.cmake      | CMake       |          9 |          0 |          2 |         11 |
+| /root/hcx/hcxServer/build/test/CMakeFiles/echo_server.dir/DependInfo.cmake        | CMake       |         25 |          0 |          4 |         29 |
+| /root/hcx/hcxServer/build/test/CMakeFiles/echo_server.dir/cmake_clean.cmake       | CMake       |          9 |          0 |          2 |         11 |
+| /root/hcx/hcxServer/build/test/cmake_install.cmake                                | CMake       |         33 |          0 |          7 |         40 |
+| Total                                                                             |             |        983 |          0 |        210 |      1,193 |
++-----------------------------------------------------------------------------------+-------------+------------+------------+------------+------------+

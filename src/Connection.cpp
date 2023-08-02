@@ -114,7 +114,7 @@ RC Connection::WriteNonBlocking(){
         }
         if (bytes_written == -1 && errno == EAGAIN) {
             // 数据无法完全写入，返回 RC_WRITE_INCOMPLETE，表示需要继续写入
-            //std::cout<<"continue"<<std::endl;
+            std::cout<<"continue??"<<std::endl;
             return RC_UNDEFINED;
         }
         if (bytes_written == -1) {
